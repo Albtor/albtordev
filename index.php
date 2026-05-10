@@ -24,7 +24,7 @@
 
   <header class="full-screen-header">
     <nav class="nav nav-top mynav nav--main">
-      <a href="#"><img class="logo" src="img/ra_logo1.png" alt="Rui Albe Logo"></a>
+      <a href="#"><img class="logo" src="img/logos/albtordev.png" alt="Rui Albe Logo"></a>
       <ul class="nav-list" id="ocultable">
         <li class="main_menu-item"><a href="#about" class="main_menu-link">About</a></li>
         <li class="main_menu-item"><a href="#portfolio" class="main_menu-link">Work</a></li>
@@ -334,7 +334,7 @@
       <!-- <li class="list-social-item"><a href="#"><i class="fab fa-instagram"></i></a></li> -->
       <li class="list-social-item"><a href="https://github.com/Albtor"><i class="fab fa-github"></i></a></li>
       <!-- <li class="list-social-item"><a href="#"><i class="fab fa-youtube"></i></a></li> -->
-  </ul>
+    </ul>
 
   </footer>
 

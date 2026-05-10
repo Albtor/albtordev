@@ -212,7 +212,7 @@
           <p>Javascript</p>
         </div>
         <div class="curriculum-grid-item">
-          <img src="img/icons/pyhon.png" alt="python icon">
+          <img src="img/icons/python.png" alt="python icon">
           <p>Python</p>
         </div>
         <div class="curriculum-grid-item">

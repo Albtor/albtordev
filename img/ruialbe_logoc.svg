@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="73.6" viewBox="0 0 170 73.6">
+  <g id="Grupo_4" data-name="Grupo 4" transform="translate(-123 -109)">
+    <rect id="Rectángulo_4" data-name="Rectángulo 4" width="170" height="72" rx="10" transform="translate(123 109)" fill="#0af"/>
+    <g id="Grupo_3" data-name="Grupo 3" transform="translate(136 113)">
+      <g id="Grupo_2" data-name="Grupo 2">
+        <text id="Rui" transform="translate(28 42)" fill="none" stroke="#fff" stroke-width="1.1" font-size="44" font-family="LondrinaShadow-Regular, Londrina Shadow" letter-spacing="0.1em"><tspan x="-27.601" y="0">R</tspan><tspan y="0" font-size="37">ui</tspan></text>
+        <text id="Albe" transform="translate(109 42)" fill="none" stroke="#fff" stroke-width="1.1" font-size="44" font-family="LondrinaShadow-Regular, Londrina Shadow" letter-spacing="0.1em"><tspan x="-36.057" y="0">A</tspan><tspan y="0" font-size="37">lbe</tspan></text>
+      </g>
+    </g>
+    <text id="_---" data-name="---" transform="translate(208.5 174.5)" fill="#e18c38" stroke="#fff" stroke-width="1.1" font-size="28" font-family="LondrinaShadow-Regular, Londrina Shadow" letter-spacing="0.1em"><tspan x="-24.682" y="0">-</tspan><tspan y="0" fill="#000">--</tspan></text>
+  </g>
+</svg>

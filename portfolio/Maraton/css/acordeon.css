@@ -1,0 +1,54 @@
+.redtext{
+    color: #de4a4a;
+}
+.titulo{
+    border: solid 1px cadetblue;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+    background: #80d180;
+}
+
+
+
+.titulo:hover{
+    background: #d1d17f;
+}
+
+/* hover despues de desplegar */
+.titulo.desplegar{
+    background: #d1d17f;
+
+}
+.titulo.desplegar:hover{
+    background:  cadetblue;
+}
+
+.titulo::after{
+    content: '+';
+    position: absolute;
+    right: 0.5em;
+}
+
+.titulo.desplegar::after{
+    content: 'X';
+}
+
+/* antes con el js acordeoneasy .texto_articulo*/
+.titulo + *{  /* El mas y asterisco + * significan  el siguiente elemento y de cualquier tipo. Cualquier elemento hermano contiguo*/
+    /*height: 0;  por defecto el contenido es visible */
+    overflow: hidden;
+    transition: all 1s ease;
+/*    border: solid 1px salmon;*/
+}
+
+
+/* After toggling the button */
+.desplegar{
+/*
+    height: 5em;
+    border: solid 1px salmon;
+*/
+    background: linear-gradient(to right, #e4f5fc 0%,#9fd8ef 45%,#9fd8ef 45%,#bfe8f9 61%,#2ab0ed 100%);
+}
+

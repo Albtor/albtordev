@@ -1,0 +1,33 @@
+
+    [
+        {
+            "texto": "Inicio",
+            "enlace": "index.php",
+            "submenu": ""
+        },
+        {
+            "texto": "Ejercicios",
+            "enlace": "e.php",
+            "submenu":[
+                {
+                "texto": "Vinoteca",
+                "enlace": "index.php"
+                },
+                {
+                "texto": "Barcos",
+                "enlace": "index.php"
+                },
+                {
+                "texto": "Maraton",
+                "enlace": "index.php"
+                }  
+            ]
+        },
+        {
+            "texto": "Contacto",
+            "enlace": "contacto.php",
+            "submenu": ""
+        }
+
+    
+    ]

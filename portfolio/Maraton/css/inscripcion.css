@@ -1,0 +1,82 @@
+.inscripcion{
+    background: linear-gradient(to right, rgb(63, 89, 175) 0%,rgb(243, 243, 243) 100%);
+    background: cadetblue;
+    min-height: 70vh;
+}
+
+/*.inscripcion{
+    background: linear-gradient(45deg, rgba(179,220,237,1) 0%,rgba(41,184,229,1) 50%,rgba(188,224,238,1) 100%);
+    opacity: 0.3;
+}*/
+
+.inscripcion_link{ 
+/*    outline: 1px solid yellow;*/
+    color: #eee;
+    text-decoration: none;
+    padding: 1rem;
+    position: relative; /* necesario para que el hijo ocupe todo el espacio */
+    z-index: 1;
+}
+
+.inscripcion_link:hover{ 
+        color: black !important;
+    }
+
+
+
+.inscripcion_link::after{
+    content: ''; /* Necesario para que funcione el pseudoelemento */
+    display: block;
+    position: absolute; /* para que ocupe todo el espacio, el padre debe ser relative */
+    background: linear-gradient(45deg, rgba(209,182,121,1) 0%,rgba(107,186,112,1) 100%);
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    border-radius: 1.5em;
+    
+}
+
+/*ESTO ES PARA HACER BOTONES*/
+
+.inscripcion_link:hover::after{
+    background: linear-gradient(45deg, rgba(209,182,121,1) 0%,rgba(107,186,112,1) 100%);
+    box-shadow: 5px 5px 10px #393636;
+    transition: box-shadow 0.3s, background 2s;
+    opacity: 1;
+}
+
+
+
+
+.inscripcion_link-km{
+    font-size: 3em;
+    margin-top: -0.75em; /* para sacar el numero de la caja se pone un margin negativo */
+}
+
+@media (min-width: 576px) {
+    .inscripcion_title > span { /* mantener sticky la inscripcion a partir de tablet*/
+        position: sticky;
+        top: 7.5rem;
+}
+    
+
+@media (min-width: 576px) and (max-width:991px){
+    .inscripcion_title { /* para rotar el inscripcion en tablet solo */
+        grid-row: span 4; /* para que ocupe toda la parte izquierda. En el lado derecho hay 4 elementos */
+    }
+    
+    .inscripcion_title > span { /* para rotar el inscripcion en tablet solo */     
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+        text-align: right;
+    }
+    
+}
+
+@media (min-width: 992px) {
+    .inscripcion_title > span {
+        top: 5rem;
+    }
+}
+}

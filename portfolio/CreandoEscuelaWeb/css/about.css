@@ -1,0 +1,33 @@
+.about{
+	min-height: 100vh;
+	/* background-color: rgb(83, 154, 175); */
+	background: url("../img/colors.jpg") no-repeat center / cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+/* .principal2 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(bg.jpg);
+    background-size: cover;
+} */
+
+.aboutme {
+    width: 60%;
+}
+
+
+@media (max-width: 970px){
+    .aboutme {
+        width: 85%;
+    }
+    
+    .about {
+        padding-top: 4.3em;
+    }
+}

@@ -1,0 +1,58 @@
+body{
+    background: linear-gradient(to right, rgba(179,220,237,1) 0%,rgba(140,206,226,1) 50%,rgba(188,224,238,1) 100%);
+}
+
+.formulario{
+    min-width: 30vw;
+    padding: 1em;
+    background: linear-gradient(to right, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(162,200,229,1) 100%);
+    border-radius: 10px;;
+    transition: 1.6s ease-out;
+    
+}
+
+.formulario:hover{
+    background: linear-gradient(to right, rgb(21, 48, 80) 0%,rgb(112, 168, 214) 50%,rgb(154, 174, 189) 100%);
+    color: white;
+}
+
+
+h3{
+    width: 100%;
+    text-align: center;
+}
+.btn{
+    background: rgb(184, 176, 75);
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    color: rgb(17, 17, 16);
+    height: 5vh;
+    transition: 1.3s;
+    
+}
+
+.btn:hover{
+    background: rgb(41, 40, 18);
+    color: rgb(255, 255, 255);
+ 
+}
+
+.resultado{
+    min-width: 30vw;
+    min-height: 20vh;
+    padding: 1em;
+    background: linear-gradient(to right, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(162,200,229,1) 100%);
+}
+
+.resultado:hover{
+    background: linear-gradient(to right, rgb(21, 48, 80) 0%,rgb(112, 168, 214) 50%,rgb(154, 174, 189) 100%);
+}
+
+
+.div{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

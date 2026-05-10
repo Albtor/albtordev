@@ -1,0 +1,57 @@
+/*RECORRIDO*/
+
+
+.recorrido{
+    background: #fefcea;
+}
+
+
+body{
+            background: #8d8d8d;
+        }
+        .recorrido_maps{
+/*            border: 1px solid green;*/
+        }
+        
+        .recorrido_maps-item{
+            min-height: 50vh;
+            width: 80vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4em;  
+        }
+        
+        .recorrido_maps-item:first-child{
+            background: aquamarine;
+        }
+        .recorrido_maps-item:nth-child(2){ /* El numero */
+            background: #6ad1ea;
+        }
+        
+        .recorrido_maps-item:last-child{
+            background: #afd177;
+        }
+
+
+        .chart{
+  
+        padding-top: 3em;
+        padding-bottom: 2em;
+        }
+        
+        /* para activar o desactivar flickity en diferentes pantallas */
+        /* enable Flickity by default */
+        .recorrido_maps::after {
+          content: 'flickity';
+          display: none; /* hide :after */
+        }
+
+        
+
+        @media screen and ( min-width: 1000px ) {
+          /* disable Flickity for large devices */
+          .recorrido_maps::after {
+            content: '';
+          }
+        }

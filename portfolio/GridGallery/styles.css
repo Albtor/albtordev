@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+}
+
+
+/*  */
+.grid-container{
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* the left will spand  */
+    grid-auto-rows: 200px;
+    gap: 10px;
+    grid-auto-flow: dense;  /* Fills gaps whenever possible */
+    align-items: stretch;
+    background-color: #333;
+    padding: 10px;
+    
+}
+/*  */
+img{
+    max-width: 100%; /*Crucial for images to not to overflow  */
+    border: 1px white solid;
+}
+
+.img1{
+    grid-template-columns: 1 / 2;
+    grid-template-rows: 1 / 2;
+}
+
+.wide {
+    grid-column: span 2;
+}
+
+.tall {
+    grid-row: span 2;
+}
+

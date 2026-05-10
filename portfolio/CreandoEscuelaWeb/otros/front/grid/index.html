@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Grid Display basics</title>
+    <link rel="stylesheet" href="css/grid.css">
+    
+    <style>
+        body{
+/*            background: rgba(106, 106, 106, 0.6);*/
+        }
+        div [class *="parte_" ]{ /* para todos los elementos que contengan col */
+            min-height: 200px;
+            color: white;
+            text-align: center;
+            font-size: 10em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 0 0 10px #000;
+        }
+        
+        .divisor{
+            border: 1px solid #356526;
+            max-width: 1000px;
+            margin: 0 auto; /* arriba abajo no funciona en auto */
+            /*grid-gap: 0.8rem 0.5rem;  filas columnas. Se puede poner un valor sólo también*/
+        }
+        
+
+        .a{background: #34b7de;} 
+        .b{background: #aeb424;}
+        .c{background: #356526;}
+        .d{background: #e81212;}
+        .e{background: #582804;}
+        .f{background: #8217de;} 
+        .g{background: #263130;}
+        /*  */
+        
+    </style>
+</head>
+<body> <!-- divisor grid_100 grid_m_50-50 grid_l_33-33-33 gap_1 gap_m_3 gap_l_2 -->
+    <div class="grid_100 grid_m_25-75 grid_l_33-33-33  gap_1">
+        <div class="parte_33 a">A </div>
+        <div class="parte_33 b cell_l_x_2">B </div>
+        <div class="parte_33 c">C </div>
+        <div class="parte_33 d">D </div>
+        <div class="parte_33 e">E </div>
+<!--
+        <div class="parte_33 f">F </div>
+        <div class="parte_33 g">G </div>
+-->
+    </div>    
+</body>
+</html>

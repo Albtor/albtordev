@@ -1,0 +1,255 @@
+/* MENU MARATON DE TENERIFE */
+
+
+.headroom{
+    position: fixed; /* hace que siempre sea visible */
+    top: 0;
+    left: 0;
+    right: 0; /* poner que el menu ocupe todo el ancho */
+/*    min-width: 100vw;*/
+    padding: 1rem 0; /* dos valores */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 1%,rgba(0,0,0,0) 100%); /* degradado sacado de colorzilla */
+    z-index: 3; /* Hacer que el menu no se vea en rojo, se superponga al home y tambien al wrapper */
+}
+
+.nav--main{
+/*    background: #f71;*/
+    display: flex; /*  */
+    justify-content: space-between; /* para hacer que cada elemento se pegue a un lado */
+    /* align-items: flex-start; hacer que el boton del menu no se expanda  Se quita*/
+    color: white;
+}
+
+.brand{
+    margin: 0;
+    width: 270px;
+}
+
+.logo{ /* para poner la imagen y quitar el texto del logo/brand */
+/*    outline: 1px solid blue;*/
+    display: block; /* para que se comporte como caja, no elemento en linea Esto es necesario */
+    text-indent: -5000px;
+    background: transparent url(img/logoblanco.svg) no-repeat left center;
+    background-size: contain; /* necesario */
+    height: 100%;
+      
+}
+
+.main_menu{
+    display: flex; /* temporalmente flex para ocultar el elemento menu, la lista. tb vale opacidad */
+    flex-wrap: wrap;
+    align-content: center; /* centrar los elementos del menu en el centro del menu */
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0, .9); /* con transparencia para el fondo del menu pulsado */
+    position: absolute; /* con respecto al contenedor padre se colocará */
+    top: -100vh; /* para sacar el menu arriba con -100vh que luego bajara*/
+    left: 0; /* sacar a la izquierda con -100vw lo hacemos con animation*/
+    z-index: -1; /* para cambiar la profundidad. mas alto numero, mas cerca. Hace que el menu se vea y no lo tape el menu de opciones al abrir la hamburguesa */ 
+     /*Animacion menu de primeras no se ve por opacidad*/
+    transition: all 0.3s ease-in-out;
+    opacity: 0;  /* hace que no se vea */
+}
+
+.main_menu.verMenu{ 
+/*    display: block;*/
+    /*display: flex;  para luego centrarlos en la pantalla. Se pone flex arriba*/
+/*Animacion menu*/
+    top: 0; /* posicion arriba */
+    opacity: 1;  /* hace que se vea */
+    /* animation: apareceMenu 0.6s;  Se crea una funcion para keyframes en otra hoja de estilos. No utilizable ahora*/
+}
+
+/*
+.main_menu .verMenu{  no concurren las dos, se aplica a ver menu 
+.main_menu.verMenu{  no concurren las dos, se aplica a ver menu 
+}
+*/
+
+a:hover{
+    color: aquamarine;
+  
+}
+
+
+.main_menu-item{
+    width: 100%; /* Hacer que los elementos ocupen todo el ancho. Con wrap hara que se pongan uno debajo del otro */
+    text-align: center; /* Alinear el texto de los links del menu */
+}
+
+.main_menu-link{
+    text-decoration: none;
+    color: #fff;  /*color de los links en el menu */
+    border-bottom: 1px dotted; /*  si se omite color coge el del texto por defecto */
+    font-size: 2em;
+    display: inline-block; /* block Hace que no se sobrepongan margin o padding, con inline si. pero ocupa todo el ancho, 100% */
+    min-width: 70%; /*  hacer que no ocupe el 100% del borde de puntos */
+    padding: 0.5em; /* para separar */
+}
+
+.main_menu-item:last-child .main_menu-link{ /* ultimo hijo de los items y lo recibe el de la clase *link para quitar el ultimo borde ya que no es necesario*/
+    border-bottom: none; /* se quita el borde al ultimo link por el diseño */
+}
+
+
+
+.btn_menu{ /*outline: solid #f00 1px;*/
+    font-size: 10px;  /* determinara el tamaño de em */
+    width: 5em; /* 5 veces el tamaño del font size */
+    height: 5em;
+    border: none; /* quitar el borde del menu */
+    background: transparent; /* ocultar el fondo del menu */
+    padding: 0;
+    position: relative; /* evitar que sakga */
+    margin: 0.5rem; /* para separar el boton, no se usa padding. Rem con el atributo de tamaño fuente del html, es menos variable*/
+}
+
+
+
+
+/* ANIMACION BOTON MENU Estado en reposo del boton Crear las lineas */
+
+.btn_menu:focus{ /* para cambiar el outline por defecto del navegador */
+    outline: dotted 1px #eee;    /* no poner none, se puede poner 0 para evitar que salga */  
+}
+
+.btn_menu span,/* solo hay un span en este html */
+.btn_menu::before,
+.btn_menu::after {
+    display: block;  /* para construir forma rectangular */
+    background: #000;  /* #000 lineas negras */
+    width: 100%;
+    height: .5em;
+    background: #fff;
+    border-radius: 100px; /* poner bordes a la linea del menu */
+    transition: all 0.3s ease-in-out; /* all se afecta a todos -elemento, tiempo, tipo*/
+}
+
+.btn_menu span {
+    text-indent: -5000px; /* necesita display block, no funciona con inline solo. Es para sacar el texto fuera */
+}
+
+.btn_menu::before,
+.btn_menu::after {
+    position: absolute; /* necesita que el padre sea relativo */
+    left: 0;
+    content: ''; /* necesaria para poder existir este */
+}
+
+.btn_menu::before { 
+    top: .90em;    
+}
+
+.btn_menu::after { 
+    bottom: .90em;
+}
+
+
+
+
+
+/* ANIMACION MENU hacer X Cuando cambie el estado del boton */
+/* .btn_menu.btnX{
+/*    background: #ff0; para fondo del boton
+} */
+
+.btn_menu.btnX span{
+    opacity: 0; /* transparente el span*/
+}
+
+.btn_menu.btnX::before{
+    transform: rotate(45deg); /* rotar la linea de arriba */
+    transition-delay: 0.1s; 
+    top: 2.2em;
+/*    transform-origin: 10% 50%;*/
+}
+
+.btn_menu.btnX::after{
+    transform: rotate(-45deg); /* rotar la linea de abajo */
+    transition-delay: 0.1s;
+    bottom: 2.3em;
+    
+}
+
+
+
+
+
+
+
+/*****MEDIA QUERIES (Need meta tag in html)******/
+
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { 
+    .nav--main{
+        flex-wrap: wrap; /* poner menu debajo del logo */
+        justify-content: center;  /* alinear los elementos de menu */
+    }
+    
+    .brand{
+        height: 3rem; 
+    }
+    
+    .main_menu{ /* el menu se muestra por defecto */
+        top: 0;  
+        opacity: 1;
+        height: auto; /* hacer el menu arriba */
+        flex-wrap: nowrap; /* para que los elementos se muestren juntos en linea */
+        /* background: blue;  color de fondo del menu, se quita al hacerlo transparent*/
+        position: relative; /* vive dentro de un padre fijo */
+        z-index: 0; /* hacer que los elementos del menu se pongan delante para poder hacer click */
+        background: transparent;  /* para que el fondo del menu se transparente */
+        justify-content: space-evenly; /* hacer que los elementos se distribuyan con un mismo espacio */
+
+    }
+    .btn_menu{ 
+        display: none; /* para no mostrar la hamburguesa en tablet */
+        
+    }
+    
+    .main_menu-item{
+        width: auto; /* quita el forzado */
+    }
+    .main_menu-link{
+        font-size: 1.5em;
+        border-bottom: none; /* quitar el borde de abajo de los links */
+        width: auto;
+    }
+    
+    
+    
+    
+    
+@media (min-width: 576px) and (max-width:991px){
+    .logo{
+        background-position: center center; /* hacer que el logo este en el centro en pantalla un poco mas grande pq por defecto estaba en left*/
+    }
+
+    .main_menu {
+        font-size: 0.7rem;
+    }
+    
+
+}    
+
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { 
+    .nav--main{
+        flex-wrap: nowrap; /* en pantallas grandes para que este uno al lado del otro */
+    }
+    
+    
+}
+
+/*Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+}*/
+
+/*Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+}*/
+
+
+

@@ -1,0 +1,150 @@
+/* MAIN MARATON DE TENERIFE */
+@import url(normalize.min.css);
+@import url(menu.css);
+@import url(animation.css);
+@import url(grid.css);
+@import url(home.css);
+@import url(inscripcion.css);
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url(fontello.css);
+@import url(modaal.css);
+@import url(sponsors.css);
+@import url(recorrido.css);
+@import url(flickity.css); /* para Slider */
+@import url(Chart.css);/* para el grafico */
+@import url(reglamento.css);
+@import url(acordeon.css);
+@import url(contacto.css);
+/*@import url(countdown.css);*/
+
+@font-face {
+    font-family: 'allerbold';
+    src: url('fonts/aller/aller_bd-webfont.woff2') format('woff2'),
+         url('fonts/aller/aller_bd-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+    scroll-behavior: smooth; /* Transicion suave */
+    box-sizing: border-box; /* Para que todos los elementos heredeen esta propiedad. Evita que la caja se expanda por padding, borders, etc. Se mantiene en su tamaño. Se podria hacer solo con * . Pero para wordpress, proyectos grandes es necesario*/
+    font-size: 18px; /* definir para luego saber el rem 18 es un estandar para pantallas grandes*/
+    
+/*    font-family: 'PT Sans Narrow', sans-serif;*/
+
+}
+ 
+*, *::before, *::after {
+    box-sizing: inherit; /* Esto es para proyectos grandes, wordpress */
+}
+
+body{
+    background: #ccc;
+    color: #333;  
+    font-family: 'allerbold';
+}
+
+.resetList {
+    list-style: none;
+    padding: 0;
+ /*   margin: 0;  quitar el margen del menu por la parte de arriba */
+}
+
+.img_resp{ 
+    max-width: 100%; /* fuerza */
+    height: auto; /* fuerza que*/
+}
+
+
+/*  */
+.txt_center{
+    text-align: center;
+}
+.txt_left{
+    text-align: left;
+}
+.txt_right{
+    text-align: right;
+}
+
+
+.container > section{ /* dar tamaño minimo a las secciones */
+    /*min-height: 100vh;  para que cada seccion se vea en pantalla completa */
+    /* padding: 1px; Hacer de frontera para establecer un limite y evitar margin collapse */
+    /*border: solid 1px transparent;  igual que arriba, transparent para evitar los margenes colapsados */
+    padding-top: 5rem; /* también evita los margin collapsed */
+
+}
+
+
+/*
+.inscripcion{
+    background: linear-gradient(to right, #f3c5bd 0%,#e86c57 26%,#ff9e5e 57%,#c65b45 100%);
+}
+.recorrido{
+    background: linear-gradient(to right, #fefcea 0%,#efe28d 100%);
+}
+
+.reglamento{
+    background: linear-gradient(to right, #f2f6f8 0%,#d8e1e7 24%,#c4cad1 56%,#e0eff9 100%);  
+}
+.contacto{
+    background: #666;
+}
+*/
+
+.piedepagina{
+    min-height: 10vh;
+    background: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin: 0;
+}
+
+
+
+
+
+@media (min-width: 576px) {
+  
+    .txt_center_M{
+    text-align: center;
+    }
+    .txt_left_M{
+    text-align: left;
+    }
+    .txt_right_M{
+    text-align: right;
+    }
+
+}   
+
+
+@media (min-width: 576px) and (max-width:991px){
+    .container > section{ 
+    padding-top: 7rem; /* hace que la sección aparezca debajo del menú en ipad. En laptop conserva el valor inicial del móvil*/
+    }
+}
+
+
+@media (min-width: 992px) {
+  
+    .txt_center_L{
+    text-align: center;
+    }
+    .txt_left_L{
+    text-align: left;
+    }
+    .txt_right_L{
+    text-align: right;
+    }
+
+}   
+    
+
+    

@@ -1,0 +1,279 @@
+@import url(grid.css);
+@import url(normalize.min.css);
+@import url(modaal.css);
+@import url(contacto.css);
+@import url(about.css);
+@import url(flickity.css);
+@import url(slider.css);
+@import url('https://fonts.googleapis.com/css?family=Bellota&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400&family=Chelsea+Market&family=Piedra&family=Press+Start+2P&display=swap');
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	scroll-behavior: smooth; /* Transicion suave */
+	font-family: "Chelsea Market", cursive;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit; /* Esto es para proyectos grandes, wordpress */
+}
+
+.container {
+	min-height: 100vh;
+}
+.main-logo {
+	display: flex;
+	justify-content:  space-between;
+	align-items: center;
+}
+
+.title{
+	/* text-indent: -3000px; */
+	color: white;
+}
+
+.ce_logo{
+	width: 50px;
+	height: 50px;
+}
+
+.logo{
+	cursor: pointer;
+	color: #edf0f1;
+}
+
+.cabecera{
+	height: 50px;
+    background-color: #24252A;
+}
+
+li, a, button{
+	font-weight: 100;
+	font-size: 18px;
+	color: #edf0f1;
+	text-decoration: none;
+}
+
+header{
+	position: absolute;
+	right: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 8%;
+	z-index: 1800;
+}
+
+.nav_links{
+	list-style: none;
+}
+
+.nav_links >li{
+	display: inline-block;
+	padding: 0px 10px;
+}
+
+.nav_links li a {
+	transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:Hover {
+	color: #01b8e6;
+}
+
+.dropdown-menu > li{
+    display: block;
+    background-color: rgb(63, 64, 68);
+}
+
+.dropdown_menu-submenu:hover{
+	background-color: rgb(103, 104, 110);
+	color: black;
+}
+
+.nav_links .dropdown-menu{
+    display: none;
+    position: absolute;
+	min-width: 140px;
+	z-index: 8888;
+}
+
+.nav_links li:hover > .dropdown-menu{
+    display: block;
+    
+}
+.dropdown_menu-submenu{
+    padding: 0.8rem;
+}
+
+button {
+	padding: 9px 25px;
+	background-color: rgba(0,136,169,1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+button:hover {
+	background-color: rgba(0,136,169,0.8);
+}
+
+
+.principal{
+	position: relative;
+	height: 100vh;
+	/* background-color: rgb(83, 154, 175); */
+	background: #f6a385 url(../img/p-2.svg) repeat center center!important;
+background-size: 300px 300px!important;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+/* .principal2 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(bg.jpg);
+    background-size: cover;
+} */
+ .principal:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/splash.jpg") no-repeat center;
+    background-size: 1600px;
+    background-position: center;
+	mix-blend-mode: exclusion;
+	z-index: 10;
+} 
+
+.principal-contenido {
+	position: relative;
+	z-index: 1400;
+	width: 600px;
+	display: flex;
+	align-items: top;
+	justify-content: space-between;
+	height: 50vh;
+
+}
+
+.curso-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-bottom: 3em;
+	padding-right: 2rem;
+
+}
+
+.curso-text a {
+	font-weight:600;
+	color: #000000;
+	border-bottom: 2px solid rgb(204, 122, 28, 0);
+	transition: border-bottom .4s ease-in-out;
+	
+
+}
+
+.curso-text a:hover {
+	color: #095C7A;
+	border-bottom: 3px solid #ffffff;
+}
+
+.principal-contenido img {
+	width: 200px;
+	height: auto;
+}
+
+.footer{
+	padding: 10px 0;
+	height: 10vh;
+    background-color: #24252A;
+	color: white;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer a {
+	color: #01b8e6;
+}
+
+.footer .ce a {
+	color: #EA7B5A;
+}
+
+.footer .ce a:hover {
+	color: #f09e85;
+}
+
+
+.footer a:hover {
+	color: #d6e079;
+}
+
+
+@media (max-width: 700px) {
+
+	li, a, button{
+		font-weight: 100;
+		font-size: 10px;
+		color: #edf0f1;
+		text-decoration: none;
+	}
+
+	.container {
+		height: 120vh;
+	} 
+
+	.principal {
+		min-height: 120vh;
+	}
+
+	.principal-contenido {
+		padding-top: 10em;
+		flex-direction: column;
+		width: 80vw;
+		height: 100%;
+		justify-content: start;
+		align-items: center;
+
+	
+	}
+
+	.principal p a {
+		font-size: 17px;
+	}
+
+	.curso-text {
+		padding-right: 0;
+	
+	}
+	.fotocurso {
+		height: 100px;
+	}
+
+
+	.curso-text  p{
+		margin-top: 1rem;
+	}
+	
+
+}
+
+

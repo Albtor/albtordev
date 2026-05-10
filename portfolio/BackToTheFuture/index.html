@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back To The Future</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="img/logobf.png" alt="toggle"></a>
+        <div class="toggle"><img src="img/toggle.png" alt="toggle"></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>Back to the <span>Future</span></h2>
+            <p>Marty McFly, a 17-year-old high school student, is accidentally sent thirty years into the past in a time-traveling DeLorean invented by his close friend, the eccentric scientist Doc Brown.</p>
+            <a href="#"  class="play" onclick="toggle();"><img src="img/play.png" alt="trailer">Watch Trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+                <li><a href="#"><img src="img/twitter.png" alt=""></a></li>
+                <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="img/instagram.png" alt=""></a></li>
+            </ul>
+        </div>
+        
+
+    </div>
+    <div class="trailer">
+        <video src="video/trailer.mp4" controls="true"></video>
+        <img src="img/close.png" class="close" alt="close icon" onclick="toggle();">
+    </div>
+    <div class="audio">
+        <audio src="audio/BacktoFuture.mp3" autoplay></audio>
+    </div>
+
+    <script>
+        function toggle(){
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('.video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause() ;
+        }
+
+
+
+    </script>
+</body>
+</html>

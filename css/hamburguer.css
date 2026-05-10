@@ -1,0 +1,136 @@
+.btnMenu {
+    display: none;
+}
+
+@media (max-width: 400px){
+
+
+.nav-list{
+    display: flex; /* temporalmente flex para ocultar el elemento menu, la lista. tb vale opacidad */
+    flex-wrap: wrap;
+    align-content: center; /* centrar los elementos del menu en el centro del menu */
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0, .9); /* con transparencia para el fondo del menu pulsado */
+    position: absolute; /* con respecto al contenedor padre se colocará */
+    top: -100vh; /* para sacar el menu arriba con -100vh que luego bajara*/
+    left: 0; /* sacar a la izquierda con -100vw lo hacemos con animation*/
+    z-index: -1; /* para cambiar la profundidad. mas alto numero, mas cerca. Hace que el menu se vea y no lo tape el menu de opciones al abrir la hamburguesa */ 
+     /*Animacion menu de primeras no se ve por opacidad*/
+    transition: all 0.3s ease-in-out;
+    opacity: 0;  /* hace que no se vea */
+}
+
+.nav-list.verMenu{ 
+    top: 0; /* posicion arriba */
+    opacity: 1;  /* hace que se vea */
+  
+}
+
+a:hover{
+    color: var(--color-blue2);
+}
+
+.main_menu-item{
+    width: 100%; 
+    text-align: center; 
+}
+
+.main_menu-link{
+    text-decoration: none;
+    color: #fff;  
+    border-bottom: 1px solid;
+    font-size: 2em;
+    display: inline-block; /* block Hace que no se sobrepongan margin o padding, con inline si. pero ocupa todo el ancho, 100% */
+    min-width: 70%; /*  hacer que no ocupe el 100% del borde de puntos */
+    padding: 0.5em; /* para separar */
+}
+
+.nav-list a:active{
+    background-color: var(--color-blue2);
+
+}
+
+.main_menu-item:last-child .main_menu-link{ /* ultimo hijo de los items y lo recibe el de la clase *link para quitar el ultimo borde ya que no es necesario*/
+    border-bottom: none; /* se quita el borde al ultimo link por el diseño */
+}
+
+
+/* main_menu en maraton */
+.btnMenu {
+    font-size: 0.3rem;
+    width: 35px;
+    height: 35px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0.5rem; /* para separar el boton, no se usa padding. Rem con el atributo de tamaño fuente del html, es menos variable*/
+    z-index: 2;
+    background-color: transparent !important;
+    border: none;
+}
+
+
+.btn_menu:focus{ /* para cambiar el outline por defecto del navegador */
+    outline: dotted 1px #eee;    /* no poner none, se puede poner 0 para evitar que salga */  
+}
+
+.btn_menu span,/* solo hay un span en este html */
+.btn_menu::before,
+.btn_menu::after {
+    display: block;  /* para construir forma rectangular */
+    background: #fff;  /* #000 lineas negras */
+    width: 100%;
+    height: 1em;
+    border-radius: 100px; /* poner bordes a la linea del menu */
+    transition: all 0.3s ease-in-out; 
+    
+}
+
+.btn_menu span {
+    text-indent: -5000px; 
+}
+
+.btn_menu::before,
+.btn_menu::after {
+    position: absolute; 
+    left: 0;
+    content: ''; 
+    z-index: 2;
+}
+
+.btn_menu::before { 
+    top: .90em;    
+}
+
+.btn_menu::after { 
+    bottom: .90em;
+}
+
+
+/* ANIMACION MENU hacer X Cuando cambie el estado del boton */
+.btn_menu.btnX{
+}
+
+.btn_menu.btnX span{
+    opacity: 0; 
+}
+
+.btn_menu.btnX::before{
+    transform: rotate(45deg); 
+    transition-delay: 0.1s; 
+    top: 3.1em;
+
+}
+
+.btn_menu.btnX::after{
+    transform: rotate(-45deg); 
+    transition-delay: 0.1s;
+    bottom: 3.2em;
+    
+}
+
+
+}

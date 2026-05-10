@@ -1,0 +1,223 @@
+.home {
+    background: transparent url(../img/bg_full.jpg) no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.home::before{
+    content: ''; /* Necesario siempre en estas reglas*/
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+/*
+    background: linear-gradient(45deg, rgba(66,27,107,1) 0%,rgba(84,0,109,1) 0%,rgba(242,24,24,1) 100%);
+    opacity: .8; 
+*/
+    background: linear-gradient(45deg, rgba(66,27,107,1) 0%,rgba(84,0,109,1) 0%,rgba(183,165,0,1) 30%,rgba(0,114,114,1) 64%,rgba(242,24,24,1) 100%);
+    mix-blend-mode: screen; /* efectos de color multiply tb */
+    background-size: 400%; 
+    animation: fondoanimado 120s infinite; /* nombre, tiempo, n de veces a repetir */
+}
+
+
+/*
+.home_block > div{  alturas a diferentes divs 
+    min-height: 25vh;
+}
+*/
+
+.home_block{     /*   */
+    color: #fff;
+    text-shadow: 0 0 10px rgba(0,0,0, .6);
+    display: flex;
+    flex-wrap: wrap;
+    position: relative; /* necesario para que el z index funcione */
+    z-index: 1;/* para que aparezca por encima de la animación */
+
+}
+
+/*
+.countdown{  color de fondo y ancho 
+   background: #809831;
+    width: 100%;
+    
+}
+*/
+
+
+
+/* COUNTDOWN*/
+
+.countdown {
+    text-align: center;
+/*    border-bottom: solid 2px #fff;*/
+    width: 100%;
+    height: 0;
+    overflow: hidden; 
+    opacity: 0;
+    animation: a_count 1s ease-in-out 1s forwards; /* animation fill mode, animista. */
+}
+.countdown_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom: solid 1px #fff;
+    padding-bottom: 1em;
+    position: relative;
+    font-size: 1.25rem;
+    max-width: 350px;
+    margin: 0 auto !important; /* centrar la caja si no es important el resetlist del main lo sobreescribiri*/
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+/*    box-shadow: 2px 1px rgba(0,0,0, 1);*/
+}
+
+/*
+.countdown_list > li{
+    text-shadow: 0 0 10px rgba(0,0,0, .9);
+}
+*/
+
+.countdown_list::before, 
+.countdown_list::after {
+    content: '';
+    height: 5em;
+    width: 1.5em;
+    position: absolute;
+    border-top: solid 1px #fff;
+    bottom: 0;
+    
+}
+
+.countdown_list::before {
+    border-left: solid 1px #fff;
+    left: 0;
+    
+}
+.countdown_list::after {
+    border-right: solid 1px #fff;
+    right: 0;
+}
+
+.countdown_list span {
+    font-weight: 900;
+}
+
+
+.dias {
+    width: 100%;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    line-height: .7;
+}
+.dias span {
+    font-size: 5em;
+/*  margin-left: .2em;*/
+}
+
+/* FIN COUNTDOWN */
+
+
+/*INSCRIPCION  */
+
+.cta_home{
+/*    background: #19b756;*/
+    width: 100%;
+    text-align: center;
+    height: 0;
+    overflow: hidden; 
+    opacity: 0;
+    animation: a_count 1s ease-in-out 1s forwards; 
+}
+
+.cta_fecha, 
+.cta_txt, 
+.cta_btn{
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.cta_txt{
+    margin: .5em;
+}
+
+.cta_btn {
+/*background-color: #4CAF50;*/
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 1em 2em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; /* necesario para que se comporte como caja */
+  font-size: 1rem;
+  margin: 1em;
+  cursor: pointer;
+  border-radius: 2em;
+  transition: all 0.1s ease-in; /* para ver la transicion al entrar y salir, si se hace en el hover solo sería al entrar */
+}
+
+
+
+.cta_btn:hover {
+   background: linear-gradient(45deg, rgba(209,182,121,1) 0%,rgba(107,186,112,1) 100%);/* fondo del boton inscribete */
+    color: #313030; 
+    text-shadow: none;
+}
+
+.cta_btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+
+.logo_NA{
+/*    background: #2dd3cc;*/
+    width: 100%;
+    text-align: center; /* con esto centrariamos el centrado de ambos textos, uno la imagen logo Naviera Armas */
+    color: #fff; 
+    margin: 0; 
+    animation: a_logoNA 2.5s;
+    filter: drop-shadow(0 0 10px rgba(0,0,0, .9)); /* crear fondo del logo animado */
+    
+}
+
+.logo_ani{
+    max-width: 400px; /* ancho maximo del logo animado */
+    height: auto; /* para que la imagen no se deforme */
+    
+    
+}
+
+
+@keyframes fondoanimado { /* para la animación del fondo */
+    0%{
+/*        background: #82007d; */
+        background-position: left bottom;
+    }
+    50%{ /* para que no de un salto la animacion al repetirse */
+        background-position: right top;
+    }
+    100%{
+        background-position: left bottom;
+    }
+}
+
+
+
+@media (min-width: 992px) {
+    .countdown{ /* en pantallas ipad en adelante dos bloques están al 50% en el espacio para que ocupen la mitad */
+    width: 50%;
+    }
+    .cta_home{
+    width: 50%;
+    }
+  
+   
+}    
+

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="89.5" height="89.4" viewBox="0 0 89.5 89.4">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="logo" transform="translate(-5.4 -5.4)">
+    <rect id="Rectángulo_1" data-name="Rectángulo 1" class="cls-1" width="5.3" height="5.3" transform="translate(21.1 5.4)"/>
+    <rect id="Rectángulo_2" data-name="Rectángulo 2" class="cls-1" width="5.3" height="5.3" transform="translate(21.1 15.9)"/>
+    <rect id="Rectángulo_3" data-name="Rectángulo 3" class="cls-1" width="5.3" height="5.3" transform="translate(15.9 10.6)"/>
+    <rect id="Rectángulo_4" data-name="Rectángulo 4" class="cls-1" width="5.3" height="5.3" transform="translate(26.4 10.6)"/>
+    <rect id="Rectángulo_5" data-name="Rectángulo 5" class="cls-1" width="5.3" height="5.3" transform="translate(73.6 5.4)"/>
+    <rect id="Rectángulo_6" data-name="Rectángulo 6" class="cls-1" width="5.3" height="5.3" transform="translate(73.6 15.9)"/>
+    <rect id="Rectángulo_7" data-name="Rectángulo 7" class="cls-1" width="5.3" height="5.3" transform="translate(68.4 10.6)"/>
+    <rect id="Rectángulo_8" data-name="Rectángulo 8" class="cls-1" width="5.3" height="5.3" transform="translate(78.9 10.6)"/>
+    <path id="Trazado_1" data-name="Trazado 1" class="cls-1" d="M89.4,47.4H63.1V42.1h21V26.4H15.9V42.2h21v5.3H5.4V94.8h5.3V63.1H37V94.6H52.8V78.9H63.3V63.1H89.6V94.6h5.3V47.4ZM42.1,42.1V36.8h-21V31.5H78.9v5.3H57.8V47.4H42.1Zm5.3,47.3H42.1V63.1h5.3ZM57.9,73.6H52.6V63.1h5.3ZM89.4,57.9H10.6V52.6H89.4Z"/>
+    <rect id="Rectángulo_9" data-name="Rectángulo 9" class="cls-1" width="5.3" height="5.3" transform="translate(68.4 73.6)"/>
+    <rect id="Rectángulo_10" data-name="Rectángulo 10" class="cls-1" width="5.3" height="5.3" transform="translate(26.4 73.6)"/>
+    <path id="Trazado_2" data-name="Trazado 2" class="cls-1" d="M60.5,15.9A10.5,10.5,0,1,0,50,26.4,10.5,10.5,0,0,0,60.5,15.9ZM50,21.1a5.3,5.3,0,1,1,5.3-5.3A5.335,5.335,0,0,1,50,21.1Z"/>
+  </g>
+</svg>

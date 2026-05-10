@@ -1,0 +1,60 @@
+/* Acordeon2 */
+
+/* la animacion de alto 0 o automatico no funciona, debe ser definido */
+/* desplegado es una clase que se activa al pasar por el titulo */
+/* para cambiar la letra y colores despues de pulsar */
+
+.titulo{
+    border: solid 1px green;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+    background: #80d180;
+}
+
+.titulo.desplegado{
+    background: black;
+    color: white;
+}
+
+.titulo:hover{
+    background: #d1d17f;
+}
+
+/* hover despues de desplegar */
+.titulo.desplegado:hover{
+    background: purple;
+}
+
+.titulo::after{
+    content: 'H';
+    position: absolute;
+    right: 0.5em;
+}
+
+.titulo.desplegar::after{
+    content: 'X';
+}
+
+/* antes con el js acordeoneasy .texto_articulo*/
+.titulo + *{  /* El mas y asterisco + * significan  el siguiente elemento y de cualquier tipo. Cualquier elemento hermano contiguo*/
+    /*height: 0;  por defecto el contenido es visible */
+    overflow: hidden;
+    transition: all 1s ease;
+/*    border: solid 1px salmon;*/
+}
+
+
+/* After toggling the button */
+.desplegar{
+/*
+    height: 5em;
+    border: solid 1px salmon;
+*/
+    background: aquamarine;
+    
+
+}
+
+
+

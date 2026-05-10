@@ -1,0 +1,44 @@
+body{
+    background: rgb(170, 207, 188);
+}
+
+.formulario{
+    min-width: 30vw;
+    padding: 1em;
+    background: rgb(127, 199, 136);
+    
+}
+
+h3{
+    width: 100%;
+    text-align: center;
+}
+.btn{
+    background: rgb(184, 176, 75);
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    color: rgb(17, 17, 16);
+    height: 5vh;
+    
+}
+
+.btn:hover{
+    background: rgb(41, 40, 18);
+    color: rgb(255, 255, 255);
+ 
+}
+
+.resultado{
+    min-width: 30vw;
+    min-height: 20vh;
+    padding: 1em;
+    background: rgb(127, 199, 136);
+}
+
+.div{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

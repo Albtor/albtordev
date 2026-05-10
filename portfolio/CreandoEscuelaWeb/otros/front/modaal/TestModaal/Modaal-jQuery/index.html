@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modaal jQuery</title>
+    <link rel="stylesheet" href="css/modaal.css">
+</head>
+
+<body>
+   
+    <a href="#inline" class="inline">Show p</a>
+    <button class="inline">Show2</button>
+        <div id="inline" style="display:none;">
+	    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        </div>
+        
+        <button data-modaal-content-source="#inline" data-modaal-type="inline" data-modaal-animation="fade" class="modaal">Show3</button><br>
+        <!--
+        data-modaal-content-source: origen es el id #inline
+        datamodaaltype= tipo
+        datamodaalanitmation= tipo de animacion
+         -->
+        
+        
+        <a href="img/1.jpg" data-group="gallery" class="gallery"><img src="img/Mini/1.jpg" alt=""></a>
+        
+        <a href="img/2.jpg" data-group="gallery" class="gallery"><img src="img/Mini/2.jpg" alt=""></a>
+        
+        <a href="img/3.jpg" data-group="gallery" class="gallery"><img src="img/Mini/3.jpg" alt=""></a>
+        
+        <a href="img/4.jpg" data-group="gallery" class="gallery"><img src="img/Mini/4.jpg" alt=""></a><br>
+       
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/oSmUI3m2kLk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+       
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d390.58589245997376!2d-16.2541267840998!3d28.469224209175255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc41cc8193baf4ad%3A0xf57ed9c3246ed28b!2sCreando%20Escuela!5e0!3m2!1ses-419!2ses!4v1576665849349!5m2!1ses-419!2ses" width="560" height="315"frameborder="0" style="border:0;" allowfullscreen=""></iframe><br>
+       
+       <!-- VIDEO VIMEO -->
+       <button href="https://player.vimeo.com/video/142216434" class="video">Show Vimeo</button>
+       <!-- VIDEO YOUTUBE -->
+       <a href="https://www.youtube.com/embed/c8lEWPKC0kk" class="video">Show Youtube</a> <br>
+       
+       <a href="ajax.html" class="modaal-ajax">Show Ajax</a>
+    
+   
+    <script src="js/jquery-3.4.1.min.js"></script> <!-- librerias primero -->
+    <script src="js/modaal.min.js"></script>
+    
+    <script>
+//   For the first "a" only  $('.inline').modaal(); 
+        $('.inline').modaal({ 
+	       content_source: '#inline'
+        });
+        
+        
+        $('.gallery').modaal({
+        type: 'image'
+        });
+        
+        
+        
+        var ancho = $(window).width();
+        console.log(ancho);
+        
+        if(ancho > 500){
+            window.alert('La ventana mide mas de 500');
+        }
+        
+        $(window).on('resize', function(){ 
+           ancho = $(window).width();
+            console.log(ancho);
+        });
+        
+        
+//        VIDEO
+        $('.video').modaal({
+	   type: 'video', 
+        hide_close: true,
+        overlay_close: false,
+        background: '#f345'
+        });
+        
+        //AJAX
+        $('.modaal-ajax').modaal({
+        type: 'ajax'
+        });
+        
+    </script>
+
+</body>
+</html>

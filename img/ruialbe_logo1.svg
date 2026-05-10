@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="188" height="75.6" viewBox="0 0 188 75.6">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.31" x2="0.683" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#0af"/>
+      <stop offset="1" stop-color="#0af" stop-opacity="0.741"/>
+    </linearGradient>
+  </defs>
+  <g id="Grupo_4" data-name="Grupo 4" transform="translate(-138 -119)">
+    <rect id="Rectángulo_4" data-name="Rectángulo 4" width="188" height="72" rx="10" transform="translate(138 121)" fill="url(#linear-gradient)"/>
+    <g id="Grupo_3" data-name="Grupo 3" transform="translate(147 162)">
+      <g id="Grupo_2" data-name="Grupo 2" transform="translate(1 -41)">
+        <text id="Rui" transform="translate(32 43)" fill="none" stroke="#fff" stroke-width="2" font-size="44" font-family="LuckiestGuy-Regular, Luckiest Guy" letter-spacing="0.05em"><tspan x="-32.113" y="0">R</tspan><tspan y="0" font-size="37">ui</tspan></text>
+        <text id="Albe" transform="translate(121 43)" fill="none" stroke="#fff" stroke-width="2" font-size="44" font-family="LuckiestGuy-Regular, Luckiest Guy" letter-spacing="0.05em"><tspan x="-46.558" y="0">A</tspan><tspan y="0" font-size="37">lbe</tspan></text>
+      </g>
+    </g>
+    <text id="_---" data-name="---" transform="translate(232.5 186.5)" fill="#e18c38" stroke="#fff" stroke-width="1.1" font-size="28" font-family="LondrinaShadow-Regular, Londrina Shadow" letter-spacing="0.1em"><tspan x="-24.682" y="0">-</tspan><tspan y="0" fill="#000">--</tspan></text>
+  </g>
+</svg>

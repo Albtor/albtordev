@@ -1,0 +1,58 @@
+/* ANIMATION MENU */
+@keyframes apareceMenu{
+    0%{
+        top: -100vh;
+        left: 0;
+    
+    }
+    
+/* PARA HACER CAMBIOS EN MEDIO
+    50%{
+        top: 0;
+    }
+    
+    75%{
+        top: -5vh;
+    }
+*/
+    100%{
+        top: 0;
+        
+    }
+    
+    
+}
+
+
+/* Esto es para animar el inicio de página para que el logo se vea primero solo */
+@keyframes a_count{ /* Se aplica a countdouuwn and cta_home */
+    0%{ 
+        height: 0;  /* para que no tenga ninguna altura y no se vea. No puede pasar de 0 a auto*/
+        overflow: hidden; /* para que no se sobreponga, para que la altura oculte el contenido */
+        opacity: 0;
+    }
+
+    100%{
+        height: 25vh;
+        overflow: visible; 
+        opacity: 1; /* opacidad va de 0 a 1 */
+    }
+}
+
+
+@keyframes a_logoNA{
+
+    0%{
+        height: 25vh;
+    }
+    50%{
+        height: 15vh;
+    }
+    75%{
+        height: 25vh;
+    }
+    100%{
+       height: 25vh; 
+    }
+
+}

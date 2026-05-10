@@ -1,0 +1,71 @@
+.slider {
+    height: 85vh;
+    padding-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2em;
+    
+}
+.main-carousel {
+  background: #EEE;
+  height: 65%;
+  width: 70vw;
+}
+
+.carousel-cell {
+  width: 80%; /* full width */
+  height: 100%; /* height of carousel */
+  margin-right: 15px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+.carousel-cell img {
+  object-fit: cover;
+  height:1 0%;
+  width: 100%;
+}
+
+.flickity-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #19F;
+}
+
+.flickity-button {
+  background: #333;
+}
+.flickity-button:hover {
+  background: #F90;
+}
+
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+}
+/* icon color */
+
+/* position outside */
+
+
+
+@media (max-width: 700px) {
+
+  .carousel-cell img {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .main-carousel {
+    height: 20vh;
+    width: 75vw;
+  }
+
+  .slider {
+    height: 80vh;
+  }
+
+}

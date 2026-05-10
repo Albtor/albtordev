@@ -1,0 +1,45 @@
+@import url(grid.css);
+
+.container{
+    border: 2px solid black;
+}
+.titulo{
+    background-color: rgb(237, 238, 155);
+    margin: 0 auto;
+    min-height: 4vh;
+    padding: 0.5rem;
+}
+.coches_active{
+    background-color: rgb(118, 212, 224);
+}
+
+.coches_inactive{
+    background-color: rgb(230, 230, 230);
+}
+
+[class*="coches_"]{
+    padding: 0.3rem;
+
+}
+
+/*segunda parte*/
+
+.titulo2{
+    background-color: rgb(93, 230, 139);
+    margin: 0 auto;
+    min-height: 4vh;
+    padding: 0.5rem;
+}
+
+.color1{
+    background-color: rgb(118, 212, 224);
+}
+
+.color2{
+    background-color: rgb(230, 230, 230);
+}
+
+[class*="color"]{
+    padding: 0.3rem;
+
+}

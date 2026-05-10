@@ -1,0 +1,14 @@
+Things to fix
+
+1) register double password block !
+2) connect tables in database (More or less done)
+
+
+Add:
+
+Tienda con otro modelo
+Registro para empleados
+Registro doctor
+
+tabla factura producto
+tabla veterinarios id cargo

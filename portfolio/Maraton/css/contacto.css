@@ -1,0 +1,74 @@
+/*CONTACTO CSS*/
+
+.contacto{ 
+    background: linear-gradient(to right, rgba(174,188,191,1) 0%,rgba(110,119,116,1) 100%);
+    min-height: 80vh;
+}
+
+.contacto_form{
+    background: #605e5e;
+    padding: .5em;
+}
+
+/* Para que no se vean los labels excepto la de terminos y condiciones */
+.contacto_form label{
+    display: none;
+}
+
+
+
+/*.contacto_form label:not(.rgpd){
+.contacto_form label:last-of-type{,, o */
+/* Cuando no pueden modificar el HTML usamos selector */
+label[for="rgpd"]{
+    display:block;
+}
+
+/* para darle el ancho maximo */
+.contacto_form input[type="text"], 
+.contacto_form input[type="email"],
+.contacto_form textarea,
+.contacto_form select{
+    width: 100%;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
+.contacto_form textarea{
+    height: 6em;
+    resize: none;
+}
+
+.boton_form{
+    box-shadow: 1px, 1px, 1px, #333;
+    height: 3em;
+}
+
+.boton_form:hover{
+    box-shadow: 1px, 1px, 1px, #333;
+    background: #5fbacb;
+}
+
+/* TABLET */
+@media (min-width: 576px) and (max-width:991px){
+    .contacto_form label{
+    display: grid;
+    }
+    
+    
+    
+}    
+
+
+/* DESKTOP */
+@media (min-width: 992px) { 
+    .contacto_form label{
+    display: grid;
+    }
+    
+    .contacto_text p{
+        padding-right: 2.2rem;
+    }
+    
+    
+}

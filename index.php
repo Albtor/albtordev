@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="css/styles.css">
   <title>AlbTorDev</title>
+  <link rel="shortcut icon" type="image/png" href="img/icons/laptop.png"/>
   
 </head>
 <body>

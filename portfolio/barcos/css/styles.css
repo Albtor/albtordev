@@ -1,0 +1,250 @@
+@import "fontello.css";
+@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*CUSTOM VARIABLES FOR COLORS*/
+
+:root {
+
+  --blue-clr: #005EB5;
+  --red-clr: #EA1C28;
+  --black-clr: #000;
+  --secondary-clr-light: #554971;
+  --linear-grad: linear-gradient(135deg, #ea1c28 0%,#dfea10 100%);
+}
+
+body *{
+	font-family: 'Baloo 2', cursive;
+
+}
+
+.container{
+	min-height: 100vh;
+	min-width: 300px;
+    background: transparent url(../img/bg-movil.jpg) no-repeat center center / cover;
+    background-color: rgb(82, 174, 202);
+    display:flex;
+    justify-content: center;
+	align-items: center;
+
+}
+
+.oferta{
+	min-height: 75vh;
+	max-height: 90vh;
+	max-width: 80vw;
+	display: flex;
+	justify-content: space-between;
+	/*outline: 1px solid black;*/
+	padding: 2em;
+	/*opacity: 0.75;*/
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow:  2px 4px 10px 5px #333;
+	flex-direction: column;
+	align-items: center;
+	transition: background-color 1s ease-in-out,
+				box-shadow 1s ease-in-out;
+}
+
+
+.oferta-item{
+	width: 100%;
+	text-align: center;
+}
+
+.brand{
+	margin: 0 auto;
+	width: 100%;
+	height: 4em;
+}
+/**/
+.logo{
+	text-indent: -3000px;
+	display: block;  /*Si no esta no hace el text indent, */
+	background: transparent url(../img/logo.svg) no-repeat center center;
+	width: 100%;
+	height: 100%;
+
+}
+
+.oferta-porcentaje{
+	font-size: 6em;
+	font-weight: 800;
+	color: var(--blue-clr);
+	line-height: 1em;
+}
+
+.oferta-porcentaje_texto{
+	font-size: 2em;
+	color: var(--blue-clr);
+	line-height: 1.2em;
+}
+
+
+.oferta-btn{
+	background-color: var(--red-clr);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0 .4em;
+	border-radius: 35px;
+	color: white;
+	text-align: center; 
+	height: 50px;
+	margin: 0.5em 0;
+	font-size: 1.7rem;
+	text-decoration: none;
+	letter-spacing: 1px;
+	text-align: center;
+	transition: background-color 2s ease-in-out;
+}
+
+.oferta-btn span{
+	line-height: 1.2rem;
+}
+
+.oferta-button i {
+	width: 10px;
+}
+
+.oferta-btn:hover{
+	cursor: pointer;
+	background: linear-gradient(135deg, #ea1c28 0%,#f7a611 70%,#fcf400 100%);
+}
+
+.dotted-box{
+	font-size: 1.2rem;
+	outline: 1px dashed black;
+	color: var(--black-clr);
+	margin: 0.3rem 0;
+}
+
+.oferta-codigo{
+	color: var(--black-clr);
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.oferta-validez{
+	color: var(--blue-clr);
+	font-size: 2em;
+	line-height: 1.3em;
+	margin-top: 0.5em;
+}
+
+
+
+
+
+/*TABLET*/
+
+@media (min-width: 700px) and (max-width:991px){
+	.container{
+		background: transparent url(../img/bg-tablet.jpg) no-repeat center center / cover;
+		display:grid;
+		grid-template-columns: 3fr 1fr 1fr;
+		grid-template-rows: 1fr 4fr 1fr;
+		grid-template-areas: "navbar navbar navbar"
+							"offer empty  empty"
+							"footer footer footer";
+		grid-gap: 5vw;
+		max-height: 100vh;
+	}
+
+	.oferta{
+		grid-area: offer; 
+		justify-self: center;
+		align-self: center;
+		/*align-self: right; Esta propiedad no me funciona  */
+		max-width: 45vw;
+		min-height: 40vh;
+		max-height: 90vh;
+	}
+
+	.oferta-btn{
+		margin: 0.2em 0;
+		text-decoration: none;
+
+	}
+
+	.oferta:focus{
+		background-color: rgba(255, 255, 255, 0.7);
+		box-shadow:  3px 7px 16px 9px rgb(43, 42, 42);
+	}
+}
+
+/*DESKTOP*/
+
+@media (min-width: 992px) {
+  	.container{
+		background: transparent url(../img/bg-desktop.jpg) no-repeat center center / cover;
+		display:grid;
+		grid-template-columns: 4fr 2fr 2fr;
+		grid-template-rows: 1fr 6fr 1fr;
+		grid-template-areas: "navbar navbar navbar"
+							"offer empty  empty"
+							"footer footer footer";
+		grid-gap: 5vw;
+		max-height: 100vh;
+	}
+	
+	.oferta{
+		grid-area: offer; 
+		justify-self: center;
+		align-self: center;
+		min-width: 20vw;
+		max-width: 35vw;
+		max-height: 90vh;
+		transition: background-color 0.8s ease-in-out,
+					box-shadow 0.8s ease-in-out;
+	}
+
+	.oferta:hover{
+		background-color: rgba(255, 255, 255, 0.7);
+		box-shadow:  3px 7px 16px 9px rgb(43, 42, 42);
+	}
+
+	.oferta-validez{
+	margin-top: 0.5em;
+}
+
+}   
+
+
+@media (max-width: 370px) {
+	.oferta * {
+		font-size: 1.2em;
+	}
+
+	
+	.oferta-button i {
+		width: .2rem;
+	}
+	
+
+
+}
+
+
+@media (max-width: 250px) {
+	.oferta * {
+		font-size: 1.2em;
+	}
+
+	.dotted-box, .oferta-btn,.oferta-validez {
+		font-size: 0.8em;
+	}
+
+	.oferta-porcentaje_texto {
+		font-size: 0.4em;
+	}
+}
+
+
+    
+

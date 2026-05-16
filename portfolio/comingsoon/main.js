@@ -1,13 +1,10 @@
 // HIDDEN DIV
-
 function toggle(){
     var newsletter = document.querySelector('.newsletter');
     newsletter.classList.toggle('active');
 }
-
 // COUNTDOWN
-
-var countDate = new Date('Jan 1, 2024 00:00:00').getTime();
+var countDate = new Date('Jun 15, 2026 00:00:00').getTime();
 
 function newYear(){
     var now = new Date().getTime();

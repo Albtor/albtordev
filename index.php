@@ -79,7 +79,7 @@
       <div class="portfolio">
 
         <div class="box">
-        <a href="portfolio/comingsoon/index.html"> // vinosanaga.secretsofthejungle.com
+        <a href="https://vinosanaga.secretsofthejungle.com"> //  portfolio/comingsoon/index.html
             <div class="imgBox">
                 <img src="img/port/vinos.png" alt="imagen web maraton de tenerife">
             </div>

@@ -1,10 +1,8 @@
 <?php
 	include "menu_controller.php";
     // include "bd_controller.php";
-    $codigo = generaCodigo($descuento);
+    $codigo = generaCodigoDefault();
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>

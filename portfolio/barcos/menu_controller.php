@@ -1,8 +1,11 @@
 <?php
-    include "funciones.php"; 
+    // include "funciones.php"; 
 ?>
-
 <?php
+    function generaCodigoDefault(){
+        $codigo = "DSCAXN40";
+        return $codigo;
+    }
    $data = file_get_contents("datos.json");
    $ofertas = json_decode($data, true); //true es para que cree un array, de lo contrario seria un objeto
    // var_dump($ofertas);

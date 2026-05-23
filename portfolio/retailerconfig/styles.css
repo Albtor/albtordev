@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300;400;700&display=swap");
+
+:root {
+  --Paack-black: #122825;
+  --Paack-darkblue: #0e1e2b;
+  --Paack-lightblue: #0da7e0;
+  --Paack-lightblue2: #0073a8;
+  --Paack-mediumblue: #0073a8;
+  --Paack-grey: #f4f4f4;
+  --Paack-green: #00b37b;
+  --Paack-red: #fe6d6f;
+  --Paack-yellow: #eee8a9;
+  --Paack-orange: #ec9929;
+  --Paack-brown: #904e00;
+  --Paack-pink: #df79c0;
+  /* https://mycolor.space/?hex=%230DA7E0&sub=1 */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.greenBackground {
+  background-color: #cceecc;
+}
+.redBackground {
+  background-color: #f5cdcd;
+}
+.category1 {
+  background-color: var(--Paack-darkblue);
+}
+.category2 {
+  background-color: var(--Paack-lightblue2);
+}
+.category3 {
+  background-color: var(--Paack-mediumblue);
+}
+.category4 {
+  background-color: var(--Paack-green);
+}
+.category5 {
+  background-color: var(--Paack-pink);
+}
+
+img {
+  width: 60px;
+  height: 60px;
+}
+img:hover {
+  animation: Shake 100ms;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 0.4rem;
+  padding: 0;
+  color: white;
+  font-size: 32px;
+  margin-left: 2rem;
+}
+
+/* .false{
+    background-color: var(--Paack-red);
+}
+.true{
+    background-color: var(--Paack-green);
+} */
+
+* {
+  margin: none;
+  padding: none;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: var(--Paack-lightblue);
+  font-family: "Gemunu Libre", sans-serif;
+  font-size: 18px;
+  /* overflow: hidden; */
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.MainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MainBoxForm {
+  /* background-color: var(--Paack-mediumblue); */
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  /* flex-direction: column; */
+  position: relative;
+  width: 50%;
+  border-radius: 20px;
+  margin-left: 2rem;
+  transition: background-color 0.4s ease-in-out;
+}
+/* .centerBox:hover{
+    background-color: var(--Paack-lightblue);
+} */
+
+.category,
+.categorybuttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  width: 520px;
+  padding: 5px;
+  padding-left: 15px;
+  border-radius: 5px;
+}
+
+.MainBoxForm .categorybuttons {
+  padding: 0;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 82%;
+}
+
+.smallBox,
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.5px;
+}
+
+.result {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+form {
+  color: white;
+}
+/* 
+form option{
+    width: 20px;
+} */
+
+.options:last-child {
+  margin-bottom: 0;
+}
+
+select {
+  border: none;
+  width: 125px;
+  text-align: right;
+  padding-right: 5px;
+  font-family: "Gemunu Libre", sans-serif;
+  font-size: 17px;
+}
+select:hover {
+  cursor: pointer;
+  background-color: #0e1e2b;
+  color: white;
+}
+
+option:hover {
+  cursor: pointer;
+}
+
+textarea {
+  width: 400px;
+  height: 400px;
+  margin-bottom: 0.4rem;
+  padding: 5px;
+}
+
+.button {
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  font-family: "Gemunu Libre", sans-serif;
+  font-size: 18px;
+  color: white;
+  background-color: var(--Paack-darkblue);
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #ec9929;
+  /* transform: scale(1.01); */
+  font-size: 18.2px;
+  box-shadow: 1.2px 1.2px var(--Paack-darkblue);
+}
+
+.buttonForm {
+  width: 48%;
+}
+
+.buttonTimeslots {
+  width: 125px;
+  border: none;
+  font-family: "Gemunu Libre", sans-serif;
+  font-size: 18px;
+  background-color: white;
+}
+.buttonTimeslots:hover {
+  cursor: pointer;
+  background-color: #0e1e2b;
+  color: white;
+}
+
+/* HIDDEN SERVICE TYPES AND TIMESLOTS */
+.Checkboxes {
+  padding: 3px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 70px;
+  background-color: rgb(255, 255, 255);
+  width: 600px;
+  /* height: 250px; */
+  visibility: hidden;
+  font-size: 18px;
+}
+
+.CheckboxesTimeslots {
+  width: 820px;
+}
+
+.timeslotsRow label {
+  margin-right: 1.2px;
+}
+.timeslotsRow label:hover,
+.ServiceTypesRow label:hover {
+  background-color: #e4e4e4;
+  border-radius: 4px;
+  /* color: white; */
+  transform: scale(1.02);
+}
+
+input {
+  padding-right: 1.2px;
+}
+input:hover {
+  cursor: pointer;
+}
+
+.ServiceTypesRow,
+.timeslotsRow {
+  display: flex;
+  justify-content: space-between;
+  /* flex-wrap: wrap; */
+  margin-bottom: 0.4rem;
+}
+
+.Checkboxes .CommonServiceTypes {
+  width: 285px;
+}
+.Checkboxes .CommonTimeSlots {
+  width: 445px;
+}
+
+.Checkboxes label:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+p {
+  margin-bottom: 0.6rem;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+/* ANIMATIONS */
+
+@keyframes Shake {
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+/* SMALL SCREEN */
+@media (max-height: 800px) {
+  .title {
+    font-size: 24px;
+  }
+  img {
+    width: 40px;
+    height: 40px;
+  }
+  body {
+    font-size: 14px;
+  }
+
+  .category,
+  .categorybuttons {
+    margin-bottom: 0.2rem;
+    width: 420px;
+    padding: 2px;
+    padding-left: 15px;
+  }
+  textarea {
+    width: 400px;
+    height: 320px;
+  }
+  select {
+    height: 17px;
+    font-size: 14px;
+  }
+
+  .Checkboxes {
+    font-size: 14px;
+    bottom: 20px;
+    height: 170px;
+  }
+
+  .CheckboxesTimeslots {
+    bottom: 30px;
+    width: 600px;
+    /* height: 220px; */
+  }
+
+  select {
+    height: 15.2px;
+    width: 110px;
+  }
+
+  .button {
+    height: 30px;
+  }
+
+  .buttonTimeslots {
+    width: 110px;
+  }
+}

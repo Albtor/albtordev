@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckGains</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" type="image/png" href="./cryptocurrency.png">
+</head>
+<body>
+    <div class="set">
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+        <div><img src="img.png" alt=""></div>
+    </div>
+    
+
+    <div class="centerBox">
+    <h1 class="title">Check Gains</h1>
+
+    <form action="#" class="form">
+        <div>
+            <label for="">Coin Name</label>
+            <!-- <input type="text" class="coin editable"> -->
+            <!-- <select onchange="val()" name="coinz editable" id="coinz"> -->
+            <select onchange="Clear(id)" name="coinz editable" id="coinz">
+                <option value=""></option>
+                <option value="btc">Bitcoin</option>
+                <option value="eth">Ethereum</option>
+                <option value="ada">Cardano</option>
+                <option value="dot">Polkadot</option>
+                <option value="ros">Rose</option>
+                <option value="sol">Solana</option>
+                <option value="pol">Polygon</option>
+                <option value="fil">Filecoin</option>
+                <option value="one">Harmony</option>
+                <option value="monr">Moonriver</option>
+                <option value="scr">Secret</option>
+                <option value="rdx">Radicle</option>
+                <option value="min">Mina</option>
+                <option value="mask">Mask</option>
+                <option value="git">Gitcoin</option>
+                <option value="kus">Kusama</option>
+                <option value="grt">The Graph</option>
+                <option value="run">ThorChain</option>
+                <option value="sta">Stacks</option>
+                <option value="uni">Uniswap</option>
+                <option value="lit">Litecoin</option>
+                <option value="xmr">Monero</option>    
+                <option value="zec">Zcash</option>    
+                <option value="btt">BitTorrent</option>  
+            </select>
+        </div>
+        <div>
+            <label for="">Money Spent</label>
+            <input type="text" class="Money editable">
+        </div>
+        <div>
+            <label for="">Price Buy</label>
+            <input type="text" class="PriceBuy editable">
+        </div>
+        <div>
+            <label for="">Price Sell</label>
+            <input type="text" class="PriceSell editable">
+        </div>
+        <div>
+            <label for="">Fee Buy</label>
+            <input type="text" class="FeeBuy editable">
+        </div>
+        <div>
+            <label for="">Fee Sell</label>
+            <input type="text" class="FeeSell editable">
+        </div>
+        <div>
+            <label for="">Quantity</label>
+            <input type="text" class="Quantity nonEditable" readonly>
+        </div>
+        <div>
+            <label for="">Total</label>
+            <input type="text" class="Total nonEditable" readonly>
+        </div>
+        <div>
+            <label for="">Difference</label>
+            <input type="text" class="Difference nonEditable" readonly>
+        </div>
+        <div>
+            <label for="">Percentage</label>
+            <input type="text" class="Porcentaje nonEditable" readonly>
+        </div>
+        <div>
+            <label for="">C. Supply (M)</label>
+            <input type="text" class="CircSupply nonEditable">
+        </div>
+        <div>
+            <label for="">MarketCap Buy</label>
+            <input type="text" class="MarketCapN nonEditable" readonly>
+        </div>
+        <div>
+            <label for="">MarketCap Sell</label>
+            <input type="text" class="MarketCapF nonEditable" readonly>
+        </div>
+        <div>
+            <label for="">To Declare</label>
+            <input type="text" class="ToDeclare nonEditable" readonly>
+        </div>
+        <div>
+            <label for="">Tax 23%</label>
+            <input type="text" class="Tax nonEditable" readonly>
+        </div>
+        <div class="buttons">
+            <input type="button" onclick="Calculate()" value="Calculate" class="button">
+            <input type="button" onclick="Clear(id)" value="Clear" class="button" id="buttonclear">
+            <!-- <button onclick="Calculate()" class="button">Calculate</button>  -->
+            <!-- <button onclick="Clear()" class="button">Clear</button>  -->
+        </div>
+        
+    </form>
+    
+</div>
+<!-- <div class="tops">
+    <h1 class="title">MARKET TOPS 2021</h1>
+    <p>BTC: €1,079,688,465,968 | Price: €57,207</p>
+    <p>ETH: €478,422,372,860 | Price: €4,042</p>
+    <p>SOL: €65,424,136,920 | Price: €216.27</p>
+    <p>ADA: €59,383,721,801 | Price: €1.78</p>
+    <p>XRP: €48,980,907,981 | Price: €1.03</p>
+    <p>DOT: €44,694,304,322 | Price: €45.26</p>
+    <p>DOGE: €30,351,838,394 | Price: €0.22</p>
+    <p>LUNA: €20,040,958,437 | Price: €44.62</p>
+    <p>LITE: €16,756,154,363 | Price: €242.93</p>
+    <p>MATIC: €11,127,552,856 | Price: €1.63</p>
+    <p>FIL: €10,136,512,157 | Price: €161</p>
+    <p>THETA: € €6,152,690,875| Price: €6.15</p>
+    <p>GALA: €4,760,000,000 | Price: €0.64</p>
+    <p>KSM: €3,736,782,005 | Price: €441.17</p>
+    <p>THOR: €3,137,927,471 | Price: €12.15</p>
+    <p>ONE: €2,808,351,347 | Price: €0.26</p>
+    <p>STA: €2,622,797,676 | Price: €2.04</p>
+    <p>ZEC: €2,304,975,997 | Price: €176.12</p>
+    <p>SCR: €1,285,888,229 | Price: €8.58</p>
+    <p>MINA: €1,372,368,427 | Price: €4.67</p>
+    <p>MORV: €753,810,704 | Price: €325.59</p>
+    <p>ROSE: €294,324,219 | Price: €0.1962</p>
+    <p>GIT: €254,000,000 | Price: €19.76</p>
+</div> -->
+    <script src=main.js></script>
+</body>
+</html>

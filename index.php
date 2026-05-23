@@ -38,7 +38,7 @@
       </button>
       
     </nav>
-    <h1 class="title"><span class="colortitle">Alb</span>Tor</h1>
+    <h1 class="title"><span class="colortitle">Alb</span>Tor <span class="colortitle">D</span>ev</h1>
     <span class="sub-title"><span class="colortitle">Mobile & Web</span> Development</span>
     <a class="btn btn-grow" href="#about">More</a>
     <a href="#about"><img class="scroll-down-icon" src="img/arrow_down.svg" alt="Scroll Down Icon"></a>
@@ -98,6 +98,42 @@
             <div class="content">
                 <h2>Marathon Web</h2>
                 <p>A responsive marathon website </p>
+            </div>
+        </a>
+        </div>
+
+        <div class="box">
+        <a href="portfolio/barcos/index.php">
+            <div class="imgBox">
+                <img src="img/port/barcos.png" alt="imagen web barcos">
+            </div>
+            <div class="content">
+                <h2>Boats Web</h2>
+                <p>A responsive boat trips website </p>
+            </div>
+        </a>
+        </div>
+
+        <div class="box">
+        <a href="portfolio/retailerconfig/index.html">
+            <div class="imgBox">
+                <img src="img/port/retailerconfig.png" alt="imagen web json generator">
+            </div>
+            <div class="content">
+                <h2>Retailer Config</h2>
+                <p>A form to configure retailer settings </p>
+            </div>
+        </a>
+        </div>
+
+        <div class="box">
+        <a href="portfolio/checkgains/index.html">
+            <div class="imgBox">
+                <img src="img/port/checkgains.png" alt="imagen web checkgains">
+            </div>
+            <div class="content">
+                <h2>CheckGains</h2>
+                <p>Javascript logic with calculations </p>
             </div>
         </a>
         </div>

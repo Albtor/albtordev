@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retailer Configuration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" type="image/png" href="img/webIcon.png">
+</head>
+<body>
+    <!-- <div class="MainDiv"> -->
+    <h2 class="title">Retailer Configuration</h2>
+    <div class="MainBoxForm">
+        
+        <form onclick="colorChange()" action="#" class="form">
+         
+            <div class="category category1">
+                <div class="iconForm img1">
+                    <img src="img/config.png" alt="icon of config">
+                </div>
+                <div class="options">
+                    <div class="smallBox">
+                        <label for="templates_json">Default Templates (optional) </label>
+                        <select onchange="fillModel()"  name="templates_json" id="templates_json">
+                            <!-- <option value="custom">Custom</option> -->
+                            <option value="WH" selected="selected">WH</option>
+                            <option value="SFS">SFS</option>
+                            <option value="WH_Manual">WH + Manual</option>
+                            <option value="SFS_Manual">SFS + Manual</option>
+                        </select>
+                    </div>
+                   <div class="smallBox">
+                        <label for="Cutoff">Cutoff</label>
+                        <select name="Cutoff" id="cutoff">
+                            <option value="00:00" selected="selected">00:00</option>
+                            <option value="23:00" >23:00</option>
+                            <option value="22:00" >22:00</option>
+                            <option value="21:00" >21:00</option>
+                            <option value="20:00" >20:00</option>
+                            <option value="19:00" >19:00</option>
+                            <option value="18:00" >18:00</option>
+                            <option value="17:00" >17:00</option>
+                            <option value="16:00" >16:00</option>
+                            <option value="15:00" >15:00</option>
+                            <option value="14:00" >14:00</option>
+                            <option value="14:00" >13:00</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="WH">Warehouse or Ship From Store</label>
+                        <select name="WH" id="WH">
+                            <option value="true" selected="selected">WH</option>
+                            <option value="false">SFS</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="NotificationService">Notification Service</label>
+                        <select name="NotificationService" id="NotificationService">
+                            <option value="true">Yes</option>
+                            <option value="false" selected="selected">No</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="category category2">
+                <div class="iconForm img2">
+                    <img src="img/email.png" alt="icon of config">
+                </div>
+                <div class="options">
+                    <!-- <div class="smallBox">
+                        <label for="Email_DTS_DTI">Email DTS/DTI</label>
+                        <select name="Email_DTS_DTI" id="Email_DTS_DTI">
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div> -->
+                    <div class="smallBox">
+                        <label for="delivery_information">DTS/DTI Trigger</label>
+                        <select onchange="checkTypeNotification(event)" name="delivery_information" id="delivery_information_type">
+                            <option value="dts_on_scan" selected="selected">DTS on Scan</option>
+                            <option value="dti_on_scan">DTI on Scan</option>
+                            <option value="dts_on_manifest">DTS on Manifest</option>
+                            <option value="dti_on_manifest">DTI on Manifest</option>
+                        </select>
+                    </div>
+                    <div class="smallBox DTS_Selected" id="DTS_Selection">
+                        <label for="">Timeslots for DTS (Not for DTI)</label>
+                        <input onclick="showHideDTS()" type="button" value="Select" class="buttonTimeslots" id="buttonTimeslots">
+                    </div>
+                    <div class="smallBox">
+                        <label for="email_pickup">Picked Up</label>
+                        <select name="email_pickup" id="email_pickup">
+                            <option value="true" selected="selected">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="email_delivered">Delivered</label>
+                        <select name="email_delivered" id="email_delivered">
+                            <option value="true" selected="selected">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="email_delivered_3rd_party">Delivered 3rd Party</label>
+                        <select name="email_delivered_3rd_party" id="email_delivered_3rd_party">
+                            <option value="true" selected="selected">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="email_absent">Absent</label>
+                        <select name="email_absent" id="email_absent">
+                            <option value="true" selected="selected">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="email_incorrect_address">Incorrect Address</label>
+                        <select name="email_incorrect_address" id="email_incorrect_address">
+                            <option value="true" selected="selected">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="email_rejected">Rejected</label>
+                        <select name="email_rejected" id="email_rejected">
+                            <option value="true" selected="selected">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="email_return_in_progress">Return in progress</label>
+                        <select name="email_return_in_progress" id="email_return_in_progress">
+                            <option value="true" selected="selected">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                 </div>
+            </div>
+            <div class="category category3">
+                <div class="iconForm  img3">
+                    <img src="img/sms.png" alt="icon of config">
+                </div>
+                <div class="options">
+                    <div class="smallBox">
+                        <label for="sms_disable_all">Disable all SMS</label>
+                        <select name="sms_disable_all" id="sms_disable_all">
+                            <option value="true">Yes</option>
+                            <option value="false" selected="selected">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="sms_delivery_information">DTS/DTI</label>
+                        <select name="sms_delivery_information" id="sms_delivery_information">
+                            <option value="true" selected="selected">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="sms_pickup">Picked up</label>
+                        <select name="sms_pickup" id="sms_pickup">
+                            <option value="true">Yes</option>
+                            <option value="false" selected="selected">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="sms_delivered">Delivered</label>
+                        <select name="sms_delivered" id="sms_delivered">
+                            <option value="true">Yes</option>
+                            <option value="false" selected="selected">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="sms_delivered_3rd_party">Delivered 3rd Party</label>
+                        <select name="sms_delivered_3rd_party" id="sms_delivered_3rd_party">
+                            <option value="true" selected="selected">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="sms_delivery_attempt">Failed Delivery Attempt</label>
+                        <select name="sms_delivery_attempt" id="sms_delivery_attempt">
+                            <option value="true" class="true" selected="selected">Yes</option>
+                            <option value="false" class="false">No</option>
+                        </select>
+                    </div>
+                 </div>
+            </div>
+            <div class="category category4">
+                <div class="iconForm img4">
+                    <img src="img/weekends.png" alt="icon of config">
+                </div>
+                <div class="options">
+                    <div class="smallBox">
+                        <label for="">Saturdays</label>
+                        <select name="" id="saturday">
+                            <option value="true" selected="selected">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="">Sundays</label>
+                        <select name="" id="sunday">
+                            <option value="true">Yes</option>
+                            <option value="false" selected="selected">No</option>
+                        </select>
+                    </div>
+                 </div>
+            </div>
+            <div class="category category5">
+                <div class="iconForm img5">
+                    <img src="img/manual.png" alt="icon of config">
+                </div>
+                <div class="options">
+                    <div class="smallBox">
+                        <label for="parametric_config">Manual Orders / Parametric Configuration</label>
+                        <select name="parametric_config" id="parametric_config">
+                            <option value="true">Yes</option>
+                            <option value="false" selected="selected">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="show_distance_in_delivery_address">Show Distance in Delivery Address</label>
+                        <select name="show_distance_in_delivery_address" id="show_distance_in_delivery_address">
+                            <option value="true">Yes</option>
+                            <option value="false" selected="selected">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="cod">Cod - Cash on Delivery</label>
+                        <select name="cod" id="cod">
+                            <option value="true">Yes</option>
+                            <option value="false" selected="selected">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="custom_timeslots">Custom TimesLots</label>
+                        <select name="custom_timeslots" id="custom_timeslots">
+                            <option value="true">Yes</option>
+                            <option value="false" selected="selected">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="show_service_types">Show Service Types (only if +2 ST)</label>
+                        <select name="show_service_types" id="show_service_types" >
+                            <option value="true">Yes</option>
+                            <option value="false" selected="selected">No</option>
+                        </select>
+                    </div>
+                    <div class="smallBox">
+                        <label for="">Service Type/s for Manual O.(Optional)</label>
+                        <input onclick="showHideST()" type="button" value="Select" class="buttonTimeslots">
+                    </div>
+                    
+                    <div class="smallBox">
+                        <label for="">Timeslots for Manual Orders (Optional)</label>
+                        <input onclick="showHideTS()" type="button" value="Select" class="buttonTimeslots">
+                    </div>
+                 </div>
+            </div>
+
+
+            <div class="category categorybuttons">
+                <input onmousedown="clearTextArea()" onmouseup="getValues(1)" type="button" value="Generate Raw JSON" class="button buttonForm">
+                <input onmousedown="clearTextArea()" onmouseup="getValues(2)"type="button" value="Generate JSON " class="button buttonForm">
+            </div>
+     </form>
+
+
+        <div class="result">
+            <textarea name="textarea" id="textarea" cols="30" rows="10" readonly></textarea>
+            <button onclick="copyJSON()" class="buttonCopy button">Copy</button>
+            
+            <!-- Hidden divs -->
+            <div id="Timeslots" class="Checkboxes CheckboxesTimeslots">
+                <p>Timeslots for Manual Orders: </p>  
+                <div class="timeslotsRow CommonTimeSlots">
+                    <!-- labels for refer to the id  -->
+                    <label for="TS_1"><input type="checkbox" id="TS_1" class="Timeslots" value="10:00-22:00"/>10:00-22:00</label>
+                    <label for="TS_1b"><input type="checkbox" id="TS_1b" class="Timeslots" value="10:00-16:00"/>10:00-16:00</label>
+                    <label for="TS_1c"><input type="checkbox" id="TS_1c" class="Timeslots" value="16:00-22:00"/>16:00-22:00</label>
+                    <label for="TS_2"><input type="checkbox" id="TS_2" class="Timeslots" value="10:00-14:00"/>10:00-14:00</label>
+                    <label for="TS_3"><input type="checkbox" id="TS_3" class="Timeslots" value="14:00-18:00"/>14:00-18:00</label>
+                    <label for="TS_4"><input type="checkbox" id="TS_4" class="Timeslots" value="18:00-22:00"/>18:00-22:00</label>
+                    <label for="TS_45"><input type="checkbox" id="TS_45" class="Timeslot30min" value="30min"/>Every 30 min</label>
+                </div> 
+                <div class="timeslotsRow">
+                    <label for="TS_5"><input type="checkbox" id="TS_5" class="Timeslots" value="10:00-12:00"/>10:00-12:00</label>
+                    <label for="TS_6"><input type="checkbox" id="TS_6" class="Timeslots" value="12:00-14:00"/>12:00-14:00</label>
+                    <label for="TS_6b"><input type="checkbox" id="TS_6b" class="Timeslots" value="14:00-16:00"/>14:00-16:00</label>
+                    <label for="TS_7"><input type="checkbox" id="TS_7" class="Timeslots" value="16:00-18:00"/>16:00-18:00</label>
+                    <label for="TS_8"><input type="checkbox" id="TS_8" class="Timeslots" value="18:00-20:00"/>18:00-20:00</label>
+                    <label for="TS_9"><input type="checkbox" id="TS_9" class="Timeslots" value="20:00-22:00"/>20:00-22:00</label>
+                    <label for="TS_10"><input type="checkbox" id="TS_10" class="Timeslots" value="14:00-18:00"/>18:00-22:00</label>
+                </div>
+                <div class="timeslotsRow">
+                    <label for="TS_11"><input type="checkbox" id="TS_11" class="Timeslots" value="9:00-11:00"/>9:00-11:00</label>
+                    <label for="TS_12"><input type="checkbox" id="TS_12" class="Timeslots" value="11:00-13:00"/>11:00-13:00</label>
+                    <label for="TS_13"><input type="checkbox" id="TS_13" class="Timeslots" value="13:00-15:00"/>13:00-15:00</label>
+                    <label for="TS_13b"><input type="checkbox" id="TS_13b" class="Timeslots" value="15:00-17:00"/>15:00-17:00</label>
+                    <label for="TS_14"><input type="checkbox" id="TS_14" class="Timeslots" value="17:00-19:00"/>17:00-19:00</label>
+                    <label for="TS_15"><input type="checkbox" id="TS_15" class="Timeslots" value="19:00-21:00"/>19:00-21:00</label>
+                    <label for="TS_16"><input type="checkbox" id="TS_16" class="Timeslots" value="21:00-23:00"/>21:00-23:00</label>
+                </div>
+                <div class="timeslotsRow">
+                    <label for="TS_17"><input type="checkbox" id="TS_17" class="Timeslots" value="09:00-11:00"/>09:00-10:00</label>
+                    <label for="TS_18"><input type="checkbox" id="TS_18" class="Timeslots" value="10:00-11:00"/>10:00-11:00</label>
+                    <label for="TS_19"><input type="checkbox" id="TS_19" class="Timeslots" value="11:00-12:00"/>11:00-12:00</label>
+                    <label for="TS_20"><input type="checkbox" id="TS_20" class="Timeslots" value="12:00-13:00"/>12:00-13:00</label>
+                    <label for="TS_21"><input type="checkbox" id="TS_21" class="Timeslots" value="13:00-14:00"/>13:00-14:00</label>
+                    <label for="TS_22"><input type="checkbox" id="TS_22" class="Timeslots" value="14:00-15:00"/>14:00-15:00</label>
+                    <label for="TS_23"><input type="checkbox" id="TS_23" class="Timeslots" value="15:00-16:00"/>15:00-16:00</label>
+                    <label for="TS_24"><input type="checkbox" id="TS_24" class="Timeslots" value="16:00-17:00"/>16:00-17:00</label>
+                    <label for="TS_25"><input type="checkbox" id="TS_25" class="Timeslots" value="17:00-18:00"/>17:00-18:00</label>
+                    <label for="TS_26"><input type="checkbox" id="TS_26" class="Timeslots" value="18:00-19:00"/>18:00-19:00</label>
+                    <label for="TS_27"><input type="checkbox" id="TS_27" class="Timeslots" value="19:00-20:00"/>19:00-20:00</label>
+                    <label for="TS_28"><input type="checkbox" id="TS_28" class="Timeslots" value="20:00-21:00"/>20:00-21:00</label>
+                    <label for="TS_29"><input type="checkbox" id="TS_29" class="Timeslots" value="21:00-22:00"/>21:00-22:00</label>
+                    <label for="TS_30"><input type="checkbox" id="TS_30" class="Timeslots" value="22:00-23:00"/>22:00-23:00</label>
+                </div>
+                
+            
+            
+            </div>
+            <div id="TimeslotsDTS" class="Checkboxes CheckboxesTimeslots DtsTimeslots">
+                <p>Timeslots for DTS Notifications: </p>  
+                <div class="timeslotsRow CommonTimeSlots">
+                    <!-- labels for refer to the id  -->
+                    <label for="DTS_1"><input type="checkbox" id="DTS_1" class="TimeslotsDTS" value="10:00-22:00"/>10:00-22:00</label>
+                    <label for="DTS_1b"><input type="checkbox" id="DTS_1b" class="TimeslotsDTS" value="10:00-16:00"/>10:00-16:00</label>
+                    <label for="DTS_1c"><input type="checkbox" id="DTS_1c" class="TimeslotsDTS" value="16:00-22:00"/>16:00-22:00</label>
+                    <label for="DTS_2"><input type="checkbox" id="DTS_2" class="TimeslotsDTS" value="10:00-14:00"/>10:00-14:00</label>
+                    <label for="DTS_3"><input type="checkbox" id="DTS_3" class="TimeslotsDTS" value="14:00-18:00"/>14:00-18:00</label>
+                    <label for="DTS_4"><input type="checkbox" id="DTS_4" class="TimeslotsDTS" value="18:00-22:00"/>18:00-22:00</label>
+                    <label for="DTS_45"><input type="checkbox" id="DTS_45" class="Timeslot30min" value="30min"/>Every 30 min</label>
+                </div> 
+                <div class="timeslotsRow">
+                    <label for="DTS_5"><input type="checkbox" id="DTS_5" class="TimeslotsDTS" value="10:00-12:00"/>10:00-12:00</label>
+                    <label for="DTS_6"><input type="checkbox" id="DTS_6" class="TimeslotsDTS" value="12:00-14:00"/>12:00-14:00</label>
+                    <label for="DTS_6b"><input type="checkbox" id="DTS_6b" class="Timeslots" value="14:00-16:00"/>14:00-16:00</label>
+                    <label for="DTS_7"><input type="checkbox" id="DTS_7" class="TimeslotsDTS" value="16:00-18:00"/>16:00-18:00</label>
+                    <label for="DTS_8"><input type="checkbox" id="DTS_8" class="TimeslotsDTS" value="18:00-20:00"/>18:00-20:00</label>
+                    <label for="DTS_9"><input type="checkbox" id="DTS_9" class="TimeslotsDTS" value="20:00-22:00"/>20:00-22:00</label>
+                    <label for="DTS_10"><input type="checkbox" id="DTS_10" class="TimeslotsDTS" value="14:00-18:00"/>18:00-22:00</label>
+                </div>
+                <div class="timeslotsRow">
+                    <label for="DTS_11"><input type="checkbox" id="DTS_11" class="TimeslotsDTS" value="9:00-11:00"/>9:00-11:00</label>
+                    <label for="DTS_12"><input type="checkbox" id="DTS_12" class="TimeslotsDTS" value="11:00-13:00"/>11:00-13:00</label>
+                    <label for="DTS_13"><input type="checkbox" id="DTS_13" class="TimeslotsDTS" value="13:00-15:00"/>13:00-15:00</label>
+                    <label for="DTS_13"><input type="checkbox" id="DTS_13" class="TimeslotsDTS" value="15:00-17:00"/>15:00-17:00</label>
+                    <label for="DTS_14"><input type="checkbox" id="DTS_14" class="TimeslotsDTS" value="17:00-19:00"/>17:00-19:00</label>
+                    <label for="DTS_15"><input type="checkbox" id="DTS_15" class="TimeslotsDTS" value="19:00-21:00"/>19:00-21:00</label>
+                    <label for="DTS_16"><input type="checkbox" id="DTS_16" class="TimeslotsDTS" value="21:00-23:00"/>21:00-23:00</label>
+                </div>
+                <div class="timeslotsRow">
+                    <label for="DTS_17"><input type="checkbox" id="DTS_17" class="TimeslotsDTS" value="09:00-11:00"/>09:00-10:00</label>
+                    <label for="DTS_18"><input type="checkbox" id="DTS_18" class="TimeslotsDTS" value="10:00-11:00"/>10:00-11:00</label>
+                    <label for="DTS_19"><input type="checkbox" id="DTS_19" class="TimeslotsDTS" value="11:00-12:00"/>11:00-12:00</label>
+                    <label for="DTS_20"><input type="checkbox" id="DTS_20" class="TimeslotsDTS" value="12:00-13:00"/>12:00-13:00</label>
+                    <label for="DTS_21"><input type="checkbox" id="DTS_21" class="TimeslotsDTS" value="13:00-14:00"/>13:00-14:00</label>
+                    <label for="DTS_22"><input type="checkbox" id="DTS_22" class="TimeslotsDTS" value="14:00-15:00"/>14:00-15:00</label>
+                    <label for="DTS_23"><input type="checkbox" id="DTS_23" class="TimeslotsDTS" value="15:00-16:00"/>15:00-16:00</label>
+                    <label for="DTS_24"><input type="checkbox" id="DTS_24" class="TimeslotsDTS" value="16:00-17:00"/>16:00-17:00</label>
+                    <label for="DTS_25"><input type="checkbox" id="DTS_25" class="TimeslotsDTS" value="17:00-18:00"/>17:00-18:00</label>
+                    <label for="DTS_26"><input type="checkbox" id="DTS_26" class="TimeslotsDTS" value="18:00-19:00"/>18:00-19:00</label>
+                    <label for="DTS_27"><input type="checkbox" id="DTS_27" class="TimeslotsDTS" value="19:00-20:00"/>19:00-20:00</label>
+                    <label for="DTS_28"><input type="checkbox" id="DTS_28" class="TimeslotsDTS" value="20:00-21:00"/>20:00-21:00</label>
+                    <label for="DTS_29"><input type="checkbox" id="DTS_29" class="TimeslotsDTS" value="21:00-22:00"/>21:00-22:00</label>
+                    <label for="DTS_30"><input type="checkbox" id="DTS_30" class="TimeslotsDTS" value="22:00-23:00"/>22:00-23:00</label>
+                </div>
+            
+
+            
+            </div>
+
+            <div id="ServiceTypes" class="Checkboxes CheckboxesServiceTypes">
+                <p>Service Types for Manual Orders: </p>
+                <div class="ServiceTypesRow CommonServiceTypes">
+                    <label for="D1"><input type="checkbox" id="D1" class="ServiceTypes" value="NT2"/>NT2</label>
+                    <label for="D2"><input type="checkbox" id="D2" class="ServiceTypes" value="NT4"/>NT4</label>
+                    <label for="D3"><input type="checkbox" id="D3" class="ServiceTypes" value="NFA"/>NFA</label>
+                    <label for="D4"><input type="checkbox" id="D4" class="ServiceTypes" value="SF4"/>SF4</label>
+                    <label for="D5"><input type="checkbox" id="D5" class="ServiceTypes" value="SF2"/>SF2</label>
+
+                </div>
+                <div class="ServiceTypesRow">
+                    <label for="NTM"><input type="checkbox" id="NTM" class="ServiceTypes" value="NTM"/>NTM</label>
+                    <label for="NT1"><input type="checkbox" id="NT1" class="ServiceTypes" value="NT1"/>NT1</label>
+                    <label for="NT2"><input type="checkbox" id="NT2" class="ServiceTypes" value="NT2"/>NT2</label>
+                    <label for="NT3"><input type="checkbox" id="NT3" class="ServiceTypes" value="NT3"/>NT3</label>
+                    <label for="NT4"><input type="checkbox" id="NT4" class="ServiceTypes" value="NT4"/>NT4</label>
+                    <label for="NT5"><input type="checkbox" id="NT5" class="ServiceTypes" value="NT5"/>NT5</label>
+                    <label for="NT6"><input type="checkbox" id="NT6" class="ServiceTypes" value="NT6"/>NT6</label>
+                    <label for="NTH"><input type="checkbox" id="NTH" class="ServiceTypes" value="NTH"/>NTH</label>
+                    <label for="NTA"><input type="checkbox" id="NTA" class="ServiceTypes" value="NTA"/>NTA</label>
+                    <label for="NTZ"><input type="checkbox" id="NTZ" class="ServiceTypes" value="NTZ"/>NTZ</label>
+                </div>
+                <div class="ServiceTypesRow">
+                    <label for="NFM"><input type="checkbox" id="NFM" class="ServiceTypes" value="NFM"/>NFM</label>
+                    <label for="NF1"><input type="checkbox" id="NF1" class="ServiceTypes" value="NF1"/>NF1</label>
+                    <label for="NF2"><input type="checkbox" id="NF2" class="ServiceTypes" value="NF2"/>NF2</label>
+                    <label for="NF3"><input type="checkbox" id="NF3" class="ServiceTypes" value="NF3"/>NF3</label>
+                    <label for="NF4"><input type="checkbox" id="NF4" class="ServiceTypes" value="NF4"/>NF4</label>
+                    <label for="NF5"><input type="checkbox" id="NF5" class="ServiceTypes" value="NF5"/>NF5</label>
+                    <label for="NF6"><input type="checkbox" id="NF6" class="ServiceTypes" value="NF6"/>NF6</label>
+                    <label for="NFH"><input type="checkbox" id="NFH" class="ServiceTypes" value="NFH"/>NFH</label>
+                    <label for="NFA"><input type="checkbox" id="NFA" class="ServiceTypes" value="NFA"/>NFA</label>
+                    <label for="NFZ"><input type="checkbox" id="NFZ" class="ServiceTypes" value="NFZ"/>NFZ</label>
+                </div>
+                <div class="ServiceTypesRow">
+                    <label for="STM"><input type="checkbox" id="STM" class="ServiceTypes" value="STM"/>STM</label>
+                    <label for="ST1"><input type="checkbox" id="ST1" class="ServiceTypes" value="ST1"/>ST1</label>
+                    <label for="ST2"><input type="checkbox" id="ST2" class="ServiceTypes" value="ST2"/>ST2</label>
+                    <label for="ST3"><input type="checkbox" id="ST3" class="ServiceTypes" value="ST3"/>ST3</label>
+                    <label for="ST4"><input type="checkbox" id="ST4" class="ServiceTypes" value="ST4"/>ST4</label>
+                    <label for="ST5"><input type="checkbox" id="ST5" class="ServiceTypes" value="ST5"/>ST5</label>
+                    <label for="ST6"><input type="checkbox" id="ST6" class="ServiceTypes" value="ST6"/>ST6</label>
+                    <label for="STH"><input type="checkbox" id="STH" class="ServiceTypes" value="STH"/>STH</label>
+                    <label for="STA"><input type="checkbox" id="STA" class="ServiceTypes" value="STA"/>STA</label>
+                    <label for="STZ"><input type="checkbox" id="STZ" class="ServiceTypes" value="STZ"/>STZ</label>
+                </div>
+                <div class="ServiceTypesRow">
+                    <label for="SFM"><input type="checkbox" id="SFM" class="ServiceTypes" value="SFM"/>SFM</label>
+                    <label for="SF1"><input type="checkbox" id="SF1" class="ServiceTypes" value="SF1"/>SF1</label>
+                    <label for="SF2"><input type="checkbox" id="SF2" class="ServiceTypes" value="SF2"/>SF2</label>
+                    <label for="SF3"><input type="checkbox" id="SF3" class="ServiceTypes" value="SF3"/>SF3</label>
+                    <label for="SF4"><input type="checkbox" id="SF4" class="ServiceTypes" value="SF4"/>SF4</label>
+                    <label for="SF5"><input type="checkbox" id="SF5" class="ServiceTypes" value="SF5"/>SF5</label>
+                    <label for="SF6"><input type="checkbox" id="SF6" class="ServiceTypes" value="SF6"/>SF6</label>
+                    <label for="SFH"><input type="checkbox" id="SFH" class="ServiceTypes" value="SFH"/>SFH</label>
+                    <label for="SFA"><input type="checkbox" id="SFA" class="ServiceTypes" value="SFA"/>SFA</label>
+                    <label for="SFZ"><input type="checkbox" id="SFZ" class="ServiceTypes" value="SFZ"/>SFZ</label>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+<!-- </div> -->
+    
+    <script src="main.js"></script>
+
+</body>
+</html>

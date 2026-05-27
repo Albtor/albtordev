@@ -25,7 +25,9 @@
 
   <header class="full-screen-header">
     <nav class="nav nav-top mynav nav--main">
-      <a href="#"><img class="logo" src="img/logos/albtordev.png" alt="Rui Albe Logo"></a>
+      <a href="#" class="logo-text">
+        <span class="alb">Alb</span><span class="tor">Tor</span><span class="dev">Dev</span>
+      </a>
       <ul class="nav-list" id="ocultable">
         <li class="main_menu-item"><a href="#about" class="main_menu-link">About</a></li>
         <li class="main_menu-item"><a href="#portfolio" class="main_menu-link">Work</a></li>
@@ -36,12 +38,23 @@
       <button id="btnMenu" class="btnMenu btn_menu">
         <span>menu</span>
       </button>
-      
     </nav>
-    <h1 class="title"><span class="colortitle">Alb</span>Tor <span class="colortitle">D</span>ev</h1>
-    <span class="sub-title"><span class="colortitle">Mobile & Web</span> Development</span>
+
+    <h1 class="title">
+      <span class="alb">Alb</span>
+      <span class="tor">Tor</span>
+      <span class="dev">Dev</span>
+    </h1>
+
+    <span class="sub-title">
+      <span class="gradient-text">Mobile & Web</span>
+      Development
+    </span>
+
     <a class="btn btn-grow" href="#about">More</a>
-    <a href="#about"><img class="scroll-down-icon" src="img/arrow_down.svg" alt="Scroll Down Icon"></a>
+    <a href="#about">
+      <img class="scroll-down-icon" src="img/arrow_down.svg" alt="Scroll Down Icon">
+    </a>
     <div class="credit">Photo by Nathan da Silva on Unsplash</div>
   </header>
 
@@ -60,13 +73,13 @@
       </div>
       </div>
         <div class="aboutme">
-           
-            <p>I'm Alberto. I code applications and websites.</p>
-            <p>I'm passionate lately about back end and mobile development.</p>
-            <p>For apps, I code Android applications with Kotlin and Android Studio.</p>
-            <p>For web, I use primarily HTML, CSS, Javascript, PHP and MySQL.</p>
-            <p>Currently working with API's, Data transfer and security. I also like new technologies like React and Blockchain.</p>
-        </div>
+          <p>I'm Alberto, a passionate developer crafting web and mobile applications.</p>
+          <p>I love building fast, responsive and user-focused digital experiences.</p>
+          <p>Specialized in back-end development, APIs, data transfer and application security.</p>
+          <p>I create Android applications with Kotlin and modern Android technologies.</p>
+          <p>My web stack includes HTML, CSS, JavaScript, PHP and MySQL.</p>
+          <p>Always learning, always experimenting — currently exploring React, blockchain and scalable systems.</p>
+      </div>
         
       </div>
     </section>
@@ -79,7 +92,7 @@
       <div class="portfolio">
 
         <div class="box">
-        <a href="https://vinosanaga.secretsofthejungle.com"> //  portfolio/comingsoon/index.html
+        <a href="https://vinosanaga.secretsofthejungle.com"> 
             <div class="imgBox">
                 <img src="img/port/vinos.png" alt="imagen web maraton de tenerife">
             </div>

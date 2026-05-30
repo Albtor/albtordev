@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kalam", cursive;
+}
+
+body {
+  background-color: #179fff;
+  color: white;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  text-align: center;
+}
+
+.container {
+  margin-bottom: 0.5rem;
+}
+
+canvas {
+  height: 200;
+  width: 400;
+}
+
+/* @media (min-width: 700px) {
+  .container {
+    padding: 0 3em;
+    justify-content: center;
+  }
+} */

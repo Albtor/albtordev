@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kalam", cursive;
+}
+
+body {
+  background-color: #179fff;
+  color: white;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+}
+
+.container2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12vh;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 10vh;
+  margin-bottom: 2em;
+}
+
+input, button {
+  padding: 0.7em 2em;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: #0c4064;
+  font-weight: 600;
+  background-color: white;
+  transform: scale(1);
+  transition: background-color 0.3s ease, color 0.2s ease,
+    transform 0.2s ease-out;
+}
+
+input:nth-child(2) {
+  margin-top: 1.3rem;
+}
+
+input:nth-child(2), button:nth-child(2) {
+  margin-top: 1.3rem;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.link:hover {
+  color: rgb(240, 137, 235);
+}
+
+input:hover, button:hover {
+  background-color: rgb(240, 137, 235);
+  outline: none;
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+
+
+input:focus, button:focus {
+  outline: none;
+  box-shadow: midnightblue;
+}
+
+.results {
+  font-size: 24px;
+}
+p {
+  margin: 0;
+}
+
+.number {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+@media (min-width: 700px) {
+  .container {
+    padding: 0 3em;
+    justify-content: center;
+  }
+
+  .results {
+    margin-right: 3em;
+  }
+
+  .formulario {
+    margin-bottom: 1em;
+  }
+}

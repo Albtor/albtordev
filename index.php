@@ -150,8 +150,17 @@
             </div>
         </a>
         </div>
-
-        
+        <div class="box">
+        <a href="portfolio/ticketproductivity/index.html">
+            <div class="imgBox">
+                <img src="img/port/ticketprod.png" alt="imagen web ticketprod">
+            </div>
+            <div class="content">
+                <h2>Ticket Productivity</h2>
+                <p>Javascript logic to track activity</p>
+            </div>
+        </a>
+        </div>
 
         <div class="box">
         <a href="portfolio/BackToTheFuture/index.html">
